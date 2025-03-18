@@ -1,0 +1,102 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+
+// Brand Orange
+$color-brand-orange: #E77436;
+
+// Brand Dark
+$color-brand-dark: #29292E;
+
+// Grey
+$color-grey: #474852;
+
+// Highlight
+$color-highlight: #F7CEB8;
+
+// Neutral
+$color-neutral: #EFEFEF;
+
+$text-color: $color-brand-dark;
+$link-color: $color-grey;
+$link-hover: $color-brand-orange;
+
+
+/*      START // DEPRECATED !!!!!!!!!!!!!! -------------------------------- */
+
+$color-green-1: #208437;
+$color-green-dark: $color-green-1;
+$color-green-1-rgba-20: rgb(42, 173, 72, 0.2);
+$color-green-dark-rgba-20: rgb(42, 173, 72, 0.2);
+$color-green-2: #2AAD48;
+$color-green-light: $color-green-2;
+
+$color-green-pale: #f4f9f4;
+$color-pale-green: $color-green-pale;
+
+// $color-pale-green: rgba(244, 249, 243, 1);
+
+$color-yellow: #FFC627;
+
+$color-gray-1: #878787;
+$color-gray-dark: $color-gray-1;
+$color-gray-2: #cfcfcf;
+$color-gray-medium: $color-gray-2;
+$color-gray-3: #f4f9f3;
+$color-gray-light: $color-gray-3;
+
+$color-black: #272727;
+$color-dark: $color-black;
+
+$color-purple: #2E3192;
+$color-red: #C1272D;
+
+
+/*      END // DEPRECATED !!!!!!!!!!!!!! -------------------------------- */
+
+
+
+$color-white: #fff;
+
+
+// $color-seashell: #fff8f0;
+
+$alert-yellow: $color-yellow;
+$alert-red: $color-red;
+$alert-green: $color-green-dark;
+$alert-blue: #d5edf8;
+
+// $black: #040b14;
+// $white: #f4eeee;
+$real-white: #ffffff;
+
+
+
+
+$text-color: $color-black;
+$link-color: $color-green-dark;
+$link-hover: $color-green-light;
+
+// $border-color: #ccc;
+// $disabled-gray: #cfcfcf;
+
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/

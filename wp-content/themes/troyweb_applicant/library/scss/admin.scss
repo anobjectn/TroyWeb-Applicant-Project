@@ -1,0 +1,55 @@
+@use "../../library/scss/partials/variables";
+@use "../../library/scss/partials/typography";
+@use "../../library/scss/partials/responsive";
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Admin Stylesheet
+
+If you like living on the edge, you can add some styles here to
+customize the dashboard and WordPress admin area. All admin 
+functions are located in `admin.php`.
+
+******************************************************************/
+
+.block-npc-hero,
+.block-npc-hero.hero-type--green-image-header{
+    h1.block-hero{
+        color: variables.$color-white;
+    }
+}
+
+
+
+// Styles for the custom dashboard widget in the admin
+#plate_dashboard_widget {
+    width: 48vw;
+    padding-bottom: 1em;
+    * {
+        line-height: 1.4;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.664em;
+    }
+    p {
+        font-size: 15px;
+    }
+}
+
+.short-wysiwyg iframe{
+    height: 210px !important;
+}
+
+.very-short-wysiwyg iframe{
+    height: 160px !important;
+}
+
+.block-editor-block-list__block.wp-block.acf-block-component.acf-block-body.wp-block-acf-content-teaser,
+.wp-block.acf-block-component.acf-block-body.wp-block-acf-content-teaser{
+    width: 100% !important;
+}

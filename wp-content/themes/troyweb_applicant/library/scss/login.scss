@@ -1,0 +1,149 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Login Stylesheet
+
+This stylesheet is loaded (if admin.php is setup in your
+functions file) on the login page. This way you can style
+the login page. It won't affect any other page, admin or front-end.
+
+For more info, check out the codex:
+http://codex.wordpress.org/Creating_Admin_Themes
+
+******************************************************************/
+
+@import "partials/variables";
+
+body.login {
+    // background-image: linear-gradient(to top, $color-green-2, $color-green-1);
+	// background-repeat: repeat-y;
+
+	background: linear-gradient(to bottom, $color-green-light, $color-green-dark 65%);
+    
+	// background: url(../images/img-bg-4.jpg) brown no-repeat;
+	// background-position: center;
+	// background-size: cover;
+	&::before{
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: url(../images/footer-texture_t.png) transparent no-repeat;
+        background-size: 100% auto;
+        background-position: top;
+        opacity: 0.4;
+	}
+	h1 {
+		margin: 0 auto 1em auto;
+	}
+
+	#login{
+		position: relative;
+	}
+	
+	input{
+		accent-color: $color-green-1;
+		&:focus{
+			// border-color: $color-golden-brown;
+			// box-shadow: 0 0 0 1px $color-golden-brown;
+		}
+	}
+	
+	.wp-core-ui .button, .wp-core-ui .button-secondary{
+		// color: $color-golden-brown;
+		transition: all 0.3s ease-out;
+		// border-color: $color-golden-brown;
+		// box-shadow: 0 0 0 1px $color-golden-brown;
+		&:hover{
+			// color: $color-turquoise;
+		}
+		&:focus{
+			// border-color: $color-turquoise;
+			// box-shadow: 0 0 0 1px $color-turquoise;
+		}
+	}
+	.privacy-policy-page-link,
+	#nav,
+	#backtoblog{
+		a{
+			color: $color-white;
+			transition: all 0.3s ease-out;
+			&:hover{
+				// color: $color-turquoise;
+				color: $color-yellow;
+			}
+		}
+	}
+}
+
+#wp-submit{
+	border-color: $color-green-2;
+	background-color: $color-green-1;
+	color: $color-white;
+}
+
+#user_login,
+#user_pass{
+	background-color: $color-green-1-rgba-20;
+}
+
+#login {
+	position: relative;
+	
+} /* the form box */
+
+#wp-submit{
+	// background-color: $color-golden-brown;
+	// border: 1px solid $color-golden-brown;
+	border-radius: 0;
+}
+
+
+/*
+Add a custom logo to the WordPress login. Clients really like their logo here.
+Just create image at least 400x400 and replace images/login-logo@2x.png.
+Now with square image and retina by default.
+*/
+.login h1{
+	a {
+		display: block;
+		overflow: hidden;
+		margin: 0 auto;
+		width: 300px;
+		// height: 156px;
+		background: url(../images/npc-logo-rails@2x.png) no-repeat top center; /* make sure to replace this! */
+		background-size: contain;
+		text-indent: -9999px;
+	}
+} 
+
+form {
+	margin-left: 8px;
+	padding: 26px 24px 46px;
+	border: 1px solid #E5E5E5;
+	border-radius: 3px;
+	background: white;
+	box-shadow: none;
+	font-weight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+}
+
+body form .input {
+	margin-top: 2px;
+	margin-right: 6px;
+	margin-bottom: 16px;
+	padding: 3px;
+	width: 97%;
+	outline: none;
+	border: 1px solid #E5E5E5;
+	background: #FBFBFB;
+	box-shadow: inset 1px 1px 2px rgba(200,200,200,0.2);
+	font-size: 24px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+}
+
+/*
+You'll have to override some of the default styles
+but since we're referencing the id, it should be easy.
+*/
+#wp-submit {} /* login button*/

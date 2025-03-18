@@ -1,0 +1,174 @@
+@use "variables";
+@use "responsive";
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+:root{
+    --mobile-grid-outer-column-width: 15px;
+    --desktop-grid-padding-inline: 58px;
+    --desktop-grid-content-max-width: 1100px;
+    --desktop-grid-wide-max-width: 1324px;
+    --desktop-grid-tight-width: 950px; //TODO CHECK IF THIS IS USED
+    --desktop-grid-extra-tight-width: 652px;
+    --desktop-grid-wide-size: calc((var(--desktop-grid-wide-max-width) - var(--desktop-grid-content-max-width)) / 2);
+
+}
+
+.wrapper-faking-grid{
+    display: block;
+    margin-inline: auto;
+    @media (max-width: responsive.$mobile-max){
+        max-width: calc(100% - 30px);
+    }
+    @media (min-width: responsive.$non-mobile-min){
+        max-width: var(--desktop-grid-content-max-width);
+    }
+}
+.wrapper-faking-grid-tight{
+    display: block;
+    margin-inline: auto;
+    @media (max-width: responsive.$mobile-max){
+        max-width: calc(100% - 30px);
+    }
+    @media (min-width: responsive.$non-mobile-min){
+        max-width: var(--desktop-grid-tight-width);
+    }
+}
+.wrapper-faking-grid-extra-tight{
+    display: block;
+    margin-inline: auto;
+    @media (max-width: responsive.$mobile-max){
+        max-width: calc(100% - 30px);
+    }
+    @media (min-width: responsive.$non-mobile-min){
+        max-width: var(--desktop-grid-extra-tight-width);
+    }
+}
+
+
+// TODO check if all these addition classes in addition to .npc-grid and still needed (used only to increase specificity)
+.is-layout-flex.wp-container-core-group-layout-1.wp-container-core-group-layout-1.npc-grid,
+.wp-container-core-group-layout-1.wp-container-core-group-layout-1.npc-grid,
+footer.npc-grid,
+.npc-grid{
+
+    display: grid;
+    gap: 0;
+    
+    &.full-width-hr,
+    &.full-width{
+        grid-column: full-width;
+    }
+    @media (max-width: responsive.$mobile-max){
+        --side-column-width: var(--mobile-grid-outer-column-width);
+        grid-template-columns: 
+            [full-width-start] 
+            var(--side-column-width) 
+            [outer-box-start] 
+            var(--side-column-width) 
+            [inner-box-start] 
+            1fr 
+            [midline] 
+            1fr 
+            [inner-box-end] 
+            var(--side-column-width)
+            [outer-box-end]
+            var(--side-column-width) 
+            [full-width-end];
+        > *{
+            grid-column: outer-box;
+            // padding-block: var(--block-vertical-inner-space);
+            &.full-width-hr,
+            &.full-width,
+            &.npc-grid-col-full-width,
+            &.cs-width-full-width,
+            &.wp-editor-align--full{
+                grid-column: full-width;
+            }
+        }
+    }
+    @media (min-width: responsive.$non-mobile-min){
+        // TODO SOMEDAY REMOVE THESE FROM LOCAL (RENAMED AND MOVED TO :ROOT)
+        --padding-inline: var(--desktop-grid-padding-inline);
+        --content-max-width: var(--desktop-grid-content-max-width);
+        --wide-max-width: var(--desktop-grid-wide-max-width);
+        --tight-width: var(--desktop-grid-tight-width); //TODO CHECK IF THIS IS USED
+        --wide-size: var(--desktop-grid-wide-size);
+
+        display: grid;
+        grid-template-columns:
+            [full-width-start] 
+            minmax(var(--padding-inline), 1fr)
+            [wide-start] 
+            minmax(0, var(--wide-size))
+            [content-start] 
+            calc(min( 100% - (var(--padding-inline) * 2), var(--content-max-width)) / 2)
+            [midline] 
+            calc(min( 100% - (var(--padding-inline) * 2), var(--content-max-width)) / 2)
+            [content-end] 
+            minmax(0, var(--wide-size)) 
+            [wide-end] 
+            minmax(var(--padding-inline), 1fr) 
+            [full-width-end];
+        > *{
+            grid-column: content;
+            // &:not(.entry-content,.wp-block-gutena-tabs,.gutena-tabs-tab){
+            //     padding-block: var(--block-vertical-inner-space);
+            // }
+
+            &.full-width-hr,
+            &.full-width,
+            &.npc-grid-col-full-width,
+            &.cs-width-full-width,
+            &.wp-editor-align--full{
+                grid-column: full-width;
+            }
+            &.npc-grid-col-wide,
+            &.cs-width-wide,
+            &.wp-editor-align--wide{
+                grid-column: wide;
+            }
+            &.npc-grid-col-content,
+            &.cs-width-content{
+                grid-column: content;
+            }
+            &.cs-width-default{
+                // intetionally does nothing
+            }
+        }
+        &.main-footer > *{
+            grid-column: wide;
+        }
+    }
+
+}
+
+.npc-stack-grid,
+.grid-stack,
+.stack-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    > *{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    &.centered-children{
+        justify-content: center;
+        align-items: center;
+    }
+    .overlay{
+        --starting-color: rgba(0,0,0,0.2);
+        --ending-color: rgba(0,0,0,0.3);
+        --stop-1-color: rgba(0,0,0,0.05);
+        --stop-1-length: 33%;
+        --stop-2-color: rgba(0,0,0,0.2);
+        --stop-2-length: 74%;
+        background-image: linear-gradient(to bottom, var(--starting-color) 0%, var(--stop-1-color) var(--stop-1-length), var(--stop-2-color) var(--stop-2-length), var(--ending-color) 100%);
+    }
+}

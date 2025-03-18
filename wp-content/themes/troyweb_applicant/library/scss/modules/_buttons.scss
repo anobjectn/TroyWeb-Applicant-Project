@@ -1,0 +1,357 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Button Styles
+
+Buttons are a pretty important part of your site's style, so it's
+important to have a consistent baseline for them. Use this stylesheet
+to create all kinds of buttons.
+
+Helpful Links:
+http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
+
+******************************************************************/
+
+@use '../partials/variables';
+@use "../partials/responsive";
+
+
+/*********************
+BUTTON DEFAULTS
+We're gonna use a placeholder selector here
+so we can use common styles. We then use this
+to load up the defaults in all our buttons.
+
+See here on placeholder selectors and why you should
+use @extend instead of @include:
+http://thesassway.com/intermediate/understanding-placeholder-selectors
+
+Also, don't use cursor: pointer; for buttons as they already should 
+signify that they are clickable:
+
+https://medium.com/simple-human/buttons-shouldnt-have-a-hand-cursor-b11e99ca374b
+
+*********************/
+
+%button {
+    position: relative;
+    display: inline-block;
+    &.wide-button{
+        display: block;
+    }
+    &:has(i){
+        display:flex;
+        align-items: baseline;
+    }
+    margin-bottom: .5em;
+    padding: 0.5em 1em;
+    border: 0;
+    border-radius: 0;
+    text-decoration: none;
+    z-index: inherit;
+    transition: all 0.3s ease-in-out;
+    &:hover, &:focus {}
+    &:active {
+        top: 1px; // adds a tiny hop to the click
+    }
+} // end .button
+
+
+button{
+    cursor: pointer;
+}
+
+
+.button {
+    @extend %button;
+}
+
+.underline-to-box{
+    --line-color: #{variables.$color-green-1};
+    --text-color-rest: #{variables.$color-black};
+    --text-color-active: #{variables.$color-white};
+    @extend %button;
+    text-decoration: none !important;
+    color: var(--text-color-rest);
+    @extend .font-futurapt-demi;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.16em;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+
+    &::before{
+        content: '';
+        position: absolute;
+        height: calc( 100% + 4px);
+        display: block;
+        width: 100%;
+        top: calc( 100% - 4px);
+        overflow: hidden;
+        background-color: var(--line-color);
+        left: 0;
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+        z-index: -1;
+    }
+    &:hover, &:focus {
+        color: var(--text-color-active);
+        text-decoration: none !important;
+        &::before{
+            top: 0;
+        }
+    }
+}
+.underline-to-box-on-dark{
+    @extend .underline-to-box;
+    --text-color-rest: #{variables.$color-white};
+}
+
+.green-button{
+    --gf-ctrl-btn-font-weight: 600;
+    @extend %button;
+    margin: 0;
+    padding: 0.55em 2em;
+    @extend .font-futurapt-bold;
+    text-transform: uppercase !important;
+    font-size: 15px !important;
+    // font-weight: bold;
+    letter-spacing: 0.15em !important;
+    border: none !important;
+    border-radius: 0 !important;
+    text-decoration: none !important;
+    background-color: variables.$color-green-1 !important;
+    color: variables.$color-white;
+    white-space: nowrap;
+    &:hover,
+    &:focus {
+        background-color: variables.$color-black !important;
+    }
+    // color: #fff;
+}
+
+.fake-box-button.fake-box-button,
+.box-button.box-button {
+    --txt-color-rest: #{variables.$color-white};
+    --txt-color-active: #{variables.$color-white};
+    --bg-color-rest: transparent;
+    --bg-color-active: #{variables.$color-black};
+    --bd-color-rest: #{variables.$color-white};
+    --bd-color-active: transparent;
+    
+    @extend %button;
+    @extend .font-futurapt-bold;
+    letter-spacing: 0.1875em;
+    margin: 0;
+    padding: 0.25em 1em;
+    background: var(--bg-color-rest);
+    color: var(--txt-color-rest);
+    // font-size: 15px;
+    text-decoration: none;    
+    transition: all 0.4s ease-out;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border: 2px solid var(--bd-color-rest);
+    &:hover, &:focus {
+        background-color: var(--bg-color-active);
+        border-color: var(--bd-color-active);
+        color: var(--txt-color-rest);
+    }
+    @media (min-width: responsive.$non-mobile-min){
+        padding: 0.5em 1.1em;
+        &:is(.cta-button .button){
+            padding: 0.5em 2.5em;
+        }
+        font-size: 15px !important;
+    }
+
+
+    .fake-box-line-button{
+        // color: $color-quartz;
+    }
+    &.wide-button{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.filter-button{
+    @extend .font-myriadpro-regular;
+    font-size: 14px;
+    padding: 0.5em 1em;
+    background-color: transparent;
+    color: variables.$color-black;
+    border: 1px solid variables.$color-gray-1;
+    border-radius: 1.5em;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    .if-active{
+        transition: all 0.2s ease-out;
+        transform: scaleX(0);
+        width: 0;
+    }
+    &.active{
+        background-color: variables.$color-green-1;
+        border-color: variables.$color-green-1;
+        color: variables.$color-white;
+        .if-active{
+            transform: scaleX(1);
+            width: auto;
+        }
+    }
+}
+
+
+
+
+.golden-brown-button{
+    @extend %button;
+    margin: 0;
+    padding: 0.75em 0.9em;
+  //   @extend .font-like-optima;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.15em;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 1px;
+    // background-color: $color-golden-brown;
+    // color: $color-quartz;
+    // border: 1px solid $color-golden-brown;
+    @media (max-width: responsive.$non-mobile-min){
+    }
+    @media (min-width: responsive.$non-mobile-min){
+        font-size: 16px;
+        padding: 0.75em 1.5em;
+    }
+}
+
+
+.main-menu > li.contains-block-link > a,
+.contains-box-link > a{
+    @extend .box-button;
+    @media (max-width: responsive.$mobile-max){
+        margin-top: 1.5em;
+        margin-inline: auto;
+    }
+    @media (min-width: responsive.$non-mobile-min){
+        // padding-block: 0.25em !important;
+    }
+}
+li.contains-box-link{
+    @media (max-width: responsive.$mobile-max){
+        text-align: center;
+    }
+}
+
+.main-menu.main-menu>li.contains-search-toggle>a{
+    display: flex;
+}
+
+
+
+.fake-box-line-button{
+    padding: 0.75em 1em;
+    @media (min-width: responsive.$non-mobile-min){
+        // padding: 1em 1.5em;
+    }
+}
+
+.underline-button{
+    @extend %button;
+  //   @extend .font-like-optima;
+    // color: $color-quartz;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 12px;
+    // text-decoration-color: $color-quartz-rgba-33;
+    // &.color-golden-brown{
+    //     text-decoration-color: $color-golden-brown-rgba-50;
+    // }
+    text-decoration-thickness: 1px;
+    letter-spacing: 0.15em;
+    padding-inline: 0;
+    .picture-card-duo-inner &{
+        text-underline-offset: 16px;
+        margin-bottom: 0.2em;
+        @media (max-width: responsive.$mobile-max){
+            margin-bottom: 1.5em;
+        }
+    }
+    line-height: 2;
+    transition: all 0.3s ease-out;
+    &:hover, &:focus {
+        // text-decoration-color: $color-quartz;
+        // &.color-golden-brown{
+        //     text-decoration-color: $color-golden-brown;
+        // }
+    }
+}
+
+.underline-button-dark{
+    @extend .underline-button;
+    // color: $color-golden-brown;
+    text-decoration-color: inherit;
+}
+
+#main-footer,
+#signup-container{
+    input[type='email']{
+        --gf-local-padding-y: 1.45em;
+        border-radius: 25px;
+        font-size: 18px;
+        line-height: 1.44;
+        padding-left: 1.3em;
+        padding-right: 4em;
+    }
+    .gform_button.button,
+    input[type="submit"]{
+        --gform-theme-local-background-color: #{variables.$color-green-dark};
+        --gf-local-bg-color: #{variables.$color-green-dark};
+        --gf-ctrl-btn-radius: 23px;
+        --gform-theme-local-border-radius: 23px;
+        --gform-theme-local-border-color: #{variables.$color-green-light};
+        --gform-theme-local-border-style: solid;
+        --gform-theme-local-border-width: 1px;
+        --gform-theme-local-inline-size: 100%;      
+        --margin-block-start: 0;
+        margin-bottom: 0;
+        width: 46px;
+        height: 46px;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
+        font-size: 20px;
+        &:hover{
+            color: variables.$color-yellow
+        }
+
+        // @extend .box-button;
+    }
+} 
+
+.gform_button.button:not(#signup-container .gform_button, .single-experience .gform_button),
+input[type="submit"]:not(#signup-container .gform_button, .single-experience .gform_button),
+.gform_wrapper input[type="submit"]:not(#signup-container .gform_button, .single-experience .gform_button){
+
+    // @extend .ruby-button;
+
+}
+
+
+.pum-container{
+    // --gf-local-bg-color: $color-golden-brown !important;
+    // --gf-local-color: $color-quartz !important;
+    input.gform_button.button{
+        // @extend .golden-brown-button;
+        // background-color: $color-golden-brown !important;
+        border-radius: 0 !important;
+        padding: 0.85em 3em !important;
+        // color: $color-quartz;
+        font-size: 16px;
+        text-transform: uppercase !important;
+        // font-family: $optima !important;
+    }
+}

@@ -1,0 +1,28 @@
+<?php
+/*
+ Template Name: Home Page
+ * 
+ * Use this template for a static home page. 
+ * If you don't need the main loop, remove it
+ * and get busy.
+*/
+?><?php get_header(); ?>
+	<div id="content">
+
+		<div id="inner-content">
+
+			<main id="main" class="main npc-grid" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog"><?php 
+				get_template_part( 'templates/hero-slider' ); ?>
+
+				<?php get_template_part( 'templates/loop'); ?>
+
+				<div class="content-section content-section-wysiwyg">
+					<?php get_template_part( 'templates/basic', 'markup' );?>
+				</div>
+			</main>
+
+		</div>
+
+	</div>
+
+<?php get_footer(); ?>

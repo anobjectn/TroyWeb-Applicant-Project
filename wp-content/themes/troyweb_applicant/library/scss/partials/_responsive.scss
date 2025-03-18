@@ -1,0 +1,86 @@
+// responsivehelper
+
+
+// $mobile-footer-width-max: 1023px;
+// $desktop-footer-width-min: 1024px;
+
+
+$unit-1:    'px';
+
+/*** primary mobile v desktop break ***/
+$mobile-size-num:   1023;
+$mobile-max:      $mobile-size-num + $unit-1;
+$non-mobile-size-num: $mobile-size-num + 1;
+$non-mobile-min:    $non-mobile-size-num + $unit-1;
+
+@media (min-width: $non-mobile-min){
+  .mq-mobile-only,
+  .mq-mobileonly,
+  .for-small{
+    display: none !important;
+  }
+  .mq-row-lg{
+    display: flex;
+  }
+}
+@media (max-width: $mobile-max){
+  .mq-desktop-only,
+  .mq-desktoponly,
+  .for-large{
+    display: none !important;
+  }
+}
+
+
+.mq-mobile-block.mq-mobile-block{
+  @media (max-width: $mobile-max){
+    display: block;
+  }
+}
+.mq-desktop-inline-block.mq-desktop-inline-block{
+  @media (min-width: $non-mobile-min){
+    display: inline-block;
+  }
+}
+
+
+
+$mainnav-small-max-num:     959;
+$mainnav-small-max:         $mainnav-small-max-num + $unit-1;
+$mainnav-large-min-num:    $mainnav-small-max-num + 1;
+$mainnav-large-min:        $mainnav-large-min-num + $unit-1;
+
+@media (min-width: $mainnav-large-min){
+  // mainnav desktop/large
+}
+@media (max-width: $mainnav-small-max){
+  // mainnav mobile/small
+}
+
+
+
+
+
+$layout-small-max-num:     959;
+$layout-small-max:         $layout-small-max-num + $unit-1;
+$layout-large-min-num:    $layout-small-max-num + 1;
+$layout-large-min:        $layout-large-min-num + $unit-1;
+
+@media (min-width: $layout-large-min){
+  // layout desktop/large styles
+  .mq-small-layout-only{
+    // use these classes on elements exclusive to one or the other layout
+    display: none !important;
+  }
+}
+@media (max-width: $layout-small-max){
+  // layout mobile/small styles
+  .mq-large-layout-only{
+    // use these classes on elements exclusive to one or the other layout
+    display: none !important;
+  }
+}
+
+
+
+
