@@ -8,7 +8,7 @@ If you want to use these alerts in your design, you can. If not,
 you can just remove this stylesheet. Or roll your own.
 
 ******************************************************************/
-
+@use "sass:color";
 @use '../partials/_variables.scss';
 
 // alerts and notices
@@ -22,27 +22,27 @@ you can just remove this stylesheet. Or roll your own.
 .alert-help {
     @extend %alert;
 
-    border-color: darken(variables.$alert-yellow, 5%);
+    border-color: color.adjust(variables.$alert-yellow, $lightness: 5%);
     background: variables.$alert-yellow;
 }
 
 .alert-info {
     @extend %alert;
 
-    border-color: darken(variables.$alert-blue, 5%);
+    border-color: color.adjust(variables.$alert-blue, $lightness: 5%);
     background: variables.$alert-blue;
 }
 
 .alert-error {
     @extend %alert;
 
-    border-color: darken(variables.$alert-red, 5%);
+    border-color: color.adjust(variables.$alert-red, $lightness: 5%);
     background: variables.$alert-red;
 }
 
 .alert-success {
     @extend %alert;
 
-    border-color: darken(variables.$alert-green, 5%);
+    border-color: color.adjust(variables.$alert-green, $lightness: 5%);
     background: variables.$alert-green;
 }

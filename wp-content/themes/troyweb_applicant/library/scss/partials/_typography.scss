@@ -141,6 +141,37 @@ FONT STACKS
 // Let's use OS system fonts and let the system do the work. We've included all the major desktop and mobile OS's.
 // See here: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/. 
 
+/* Lato */
+
+.font-lato,
+.font-lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* Oregano */
+
+.font-oregano-regular {
+  font-family: "Oregano", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-oregano-regular-italic {
+  font-family: "Oregano", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Oldenburg */
+
+.font-oldenburg-regular {
+  font-family: "Oldenburg", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 
 
@@ -205,16 +236,24 @@ FONT STACKS
   font-style: normal;
 }
 
+/* Navigation Heading */
+.font-navigation-heading-label,
+.navigation-heading-label{
+  @extend .font-lato-bold;
+  font-size: 1.5rem;
+  color: variables.$color-brand-dark;
+}
+
 
 body:not(.wp-admin){
-  @extend .font-myriadpro-regular;
+  @extend .font-oldenburg-regular;
   font-size: 112.5%;
   line-height: 1.56;
-  letter-spacing: 0.02em;
-  strong,
-  b{
-    @extend .font-myriadpro-semibold;
-  }
+  // letter-spacing: 0.02em;
+  // strong,
+  // b{
+  //   @extend .font-myriadpro-semibold;
+  // }
 }
 
 
@@ -353,10 +392,10 @@ RESPONSIVE FONTS
   // useage 
   // @include typography.responsive-font(16px, 18px, 1023px, 1440px);
   // @include typography.responsive-font(24px, 36px, 768px, 1600px);
-  $u1: unit($min-vw);
-  $u2: unit($max-vw);
-  $u3: unit($min-font-size);
-  $u4: unit($max-font-size);
+  $u1: math.unit($min-vw);
+  $u2: math.unit($max-vw);
+  $u3: math.unit($min-font-size);
+  $u4: math.unit($max-font-size);
 
   @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
     font-size: $min-font-size;
@@ -403,7 +442,9 @@ img + .roof-text{
 }
 
 .large-text{
+    @extend .font-oregano-regular;
     margin-bottom: 0.75em;
+    line-height: 1.4;
     // @extend .font-ogg;
     @include responsive-font(28px, 42px, 768px, 1440px);
     &.size-2{
@@ -418,7 +459,6 @@ img + .roof-text{
     &.size-5{
       @include responsive-font(28px, 38px, 768px, 1440px);
     }
-    line-height: 1.4;
     // &:not(.content-section-picture-card-duo .large-text){
     //   color: $color-onyx;
     //   p{
@@ -446,7 +486,6 @@ img + .roof-text{
 
 .big-text{
     // @extend .font-ogg;
-    @include responsive-font(24px, 40px, 768px, 1440px);
     // color: $color-onyx;
     line-height: 1.48;
     text-wrap: balance;
@@ -458,6 +497,8 @@ img + .roof-text{
     &.smaller{
       @include responsive-font(20px, 34px, 768px, 1440px);
     }
+
+    @include responsive-font(24px, 40px, 768px, 1440px);
 }
 
 .line-clamp-base {

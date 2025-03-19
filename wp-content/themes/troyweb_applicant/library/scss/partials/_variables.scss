@@ -89,8 +89,13 @@ $real-white: #ffffff;
 
 
 $text-color: $color-black;
-$link-color: $color-green-dark;
-$link-hover: $color-green-light;
+$color-text: $text-color;
+
+$link-color: $color-brand-orange;
+$color-link: $link-color;
+
+$link-hover: $color-grey;
+$color-link-hover: $link-hover;
 
 // $border-color: #ccc;
 // $disabled-gray: #cfcfcf;

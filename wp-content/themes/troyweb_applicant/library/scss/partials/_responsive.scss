@@ -8,7 +8,7 @@
 $unit-1:    'px';
 
 /*** primary mobile v desktop break ***/
-$mobile-size-num:   1023;
+$mobile-size-num:   767;
 $mobile-max:      $mobile-size-num + $unit-1;
 $non-mobile-size-num: $mobile-size-num + 1;
 $non-mobile-min:    $non-mobile-size-num + $unit-1;

@@ -11,6 +11,7 @@ Here are a few defaults for forms and stuffs.
 @use "../partials/variables";
 @use "../partials/responsive";
 @use "../partials/typography";
+@use "../modules/buttons";
 
 
 /*********************
@@ -265,100 +266,7 @@ select.minimal{
     // }
 }
 
-.newsletter-signup-container{
-    .gf-turnstile-container{
-        position: absolute !important;
-        > div > div{
-            position: absolute;
-            top: 60px;
-            left: -260px;
-        }
-    }
-    .gform_validation_errors{
-        margin-right: 1em;
-    }
-    .gfield_description.validation_message.gfield_validation_message{
-        padding: 0.5em;
-    }
-    .gform_required_legend{
-        display: none;
-    }
-    .gfield_label.gform-field-label{
-        @extend .sr-only;
-    }
-    form{
-        display: flex;
-        position: relative;
-        align-items: center;
-    }
-    .gform_wrapper{
-        padding-inline: 17px; // NOTE: CURRENTLY DO NOT KNOW WHY THIS IS NEEDED. WHEN LESS THAN 17, FIELD DOES NOT GROW AND GETS MISALIGNED WITH BUTTON
-    }
-    .gform-body{
-        padding: 0 !important;
-    }
-    .gform_footer{
-        position: absolute;
-        right: 3px;
-        // top: 4px;
-        &:is(.gform_validation_error .gform_footer){
-            // top: 26px;
-        }
-    }
-    #validation_message_1_1{
-        position: absolute;
-    }
-    #gform_1_validation_container,
-    .validation_message.gfield_validation_message{
-        background-color: #fff;
-    }
-    .gform_description{
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 22px;
-        line-height: 1.09;
-        margin-top: 0;
-        @extend .font-futurapt-bold;
-    }
-    input[type="submit"]{
-        // NOTE: LOOK IN THE _buttons.scss FILE FOR THE THESE STYLES
-    }
-    input[type='email'],
-    input[type='text'],
-    input[type='search']{
-        text-align: left;
-    }
-    .gf-turnstile-container{
-        // position: absolute;
-        // right: -46px;
-    }
-    @media (max-width: responsive.$mobile-max){
-        .gform-body{
-            width: 100%;
-        }
-    }
-    @media (min-width: responsive.$non-mobile-min){
-        .gform_wrapper{
-            display: flex;
-            // gap: 1.5em;
-            padding-inline: 0;
-            justify-content: space-between;
-            border-bottom: 4px solid variables.$color-gray-1;
-        }
-        .gform_heading,
-        form{
-            width: 50%;
-        }
-        .gform_description{
-            text-align: left;
-            text-wrap: balance;
-            letter-spacing: 2.64px;
-            letter-spacing: 0.12em;
-        }
 
-        
-    }
-}
 
 #main-footer{
     .gfield.minimal{
@@ -441,7 +349,6 @@ select.minimal{
     .gform_validation_errors,
     .gform_heading,
     form{
-        @extend .wrapper-faking-grid-extra-tight;
     }
     .gform_heading{
         text-align: center;

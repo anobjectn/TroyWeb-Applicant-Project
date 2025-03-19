@@ -13,16 +13,17 @@ those viewpoints.
 
 ******************************************************************/
 
-body{
+@use "../partials/variables";
+@use "../partials/mixins";
+@use "../partials/responsive";
+@use "../partials/typography";
 
+:root{
     --block-vertical-inner-space: 1rem;
-    @media (min-width: responsive.$non-mobile-min){
-        --block-vertical-inner-space: 2.25rem;
-    }
-
+    
     --main-content-outer-column-max: 1324px;
     --side-filler-column-width: calc( 50vw - (var(--main-content-outer-column-max) / 2) );
-
+    
     --swiper-navigation-size: 46px;
     // --swiper-navigation-sides-offset: -20px;
     --swiper-pagination-bullet-width: 40px;
@@ -32,12 +33,21 @@ body{
     --swiper-pagination-bullet-inactive-opacity: 0.32;
     --swiper-pagination-bullet-border-radius: 3px;
     --swiper-pagination-bullet-horizontal-gap: 3px;
-
+    
     --modal-overlay-opacity: 0.6; // this is set it JS but in case you want to be consistent
     --modal-image-border-width: 10px;
     --modal-image-border-color: #fff;
-
+    
     --offset-top: 0px;
+    --offset-top-w-header: 0;
+
+    --color-white: #{variables.$color-white};
+}
+
+body{    
+    @media (min-width: responsive.$non-mobile-min){
+        --block-vertical-inner-space: 2.25rem;
+    }
     &.admin-bar {
         @media (min-width: 601px){
             --offset-top: 46px;
@@ -46,7 +56,6 @@ body{
             --offset-top: 32px;
         }
     }
-    --offset-top-w-header: 0;
     @media (min-width: responsive.$non-mobile-min){
         --offset-top-w-header: calc(var(--offset-top) + 80px);
     }
@@ -781,16 +790,18 @@ further. Using correct headings helps with readability, SEO, and accessibility.
 /* Heading defaults */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     margin: 0;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     // color: lighten($sb-black, 12%);
     // color: variables.$color-onyx;
     // font-weight: 500;
     line-height: 1.2;
     text-rendering: optimizelegibility;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.01em;
     // line-height: 1.2; capital letter width: 0.7
     // change for your typeface.
     @include mixins.lhCrop(1.2, 0.7); 
+
+    @extend .font-lato-bold;
 
     /*
     if you're going to use webfonts, be sure to check your weights
@@ -808,51 +819,50 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 h1, .h1,
 h2, .h2 {
+    letter-spacing: -0.021em;
     &:not(.block-twa-hero *){
-        color: variables.$color-green-1;
+        // color: variables.$color-green-1;
     }
 }
 h1, .h1 {
-    @extend .font-futurapt-heavy;
     margin-top: 0;
     // margin-bottom: 0.319em;
-    // font-size: 2.778em; 
-    letter-spacing: 0.2em;
-    @include typography.responsive-font(30px, 36px, 1023px, 1440px);
+    // font-size: 2.778em;
+    // font-size: 1rem;
+    font-size: 3rem;
+    color: variables.$color-brand-orange;
+    // letter-spacing: 0.2em;
+    // @include typography.responsive-font(30px, 36px, 1023px, 1440px);
     &.single-title{
         letter-spacing: 0.15em;
-        @include typography.responsive-font(25px, 36px, 1023px, 1440px);
         margin-bottom: 0.4em;
+        // @include typography.responsive-font(25px, 36px, 1023px, 1440px);
     }
 }
 
 h2, .h2 {
-    @extend .font-futurapt-heavy;
     // margin-top: 0.88em;
-    font-size: 2.0em; // target ( ~36px )
+    color: variables.$color-brand-dark;
+    letter-spacing: -0.028em;
+    font-size: 2.25rem; // target ( ~36px )
     margin-bottom: 0.2em;
-    @include typography.responsive-font(30px, 36px, 1023px, 1440px);
-
+    // @include typography.responsive-font(30px, 36px, 1023px, 1440px);
 }
 
 h3, .h3 {
-    @extend .font-futurapt-heavy;
-    font-size: 1.667em; // target ( ~30px )
-    letter-spacing: 0.15em;
+    font-size: 2rem; // target ( ~32px )
+    letter-spacing: .0469em;
 }
 
 h4, .h4 {
-    @extend .font-futurapt-demi;
     font-size: 1.22225em; // target ( ~22px )
 }
 
 h5, .h5 {
-    @extend .font-futurapt-bold;
     font-size: 1em;  // target ( ~18px )
 }
 
 h6, .h6 {
-    @extend .font-futurapt-bold;
     text-transform: uppercase;
     // letter-spacing: 4.333px;
     font-size: 0.833335em;  // target ( ~15px )
@@ -1197,9 +1207,10 @@ ul.nav{
         padding-bottom: 1em;
     }
     a{
-        @extend .font-futurapt-bold;
+
+        @extend .font-navigation-heading-label;
         text-decoration: none;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         &:not(li.contains-button > a){
             display: block;
         }
@@ -1209,7 +1220,7 @@ ul.nav{
         --vertical-spacing: 0.75em;
         width: 100%;
         @media (max-width: responsive.$mobile-max){
-            & + li:not(.contains-button){
+            & + li:not(.contains-button,.show-link-as-button){
                 padding-top: var(--vertical-spacing);
                 margin-top: var(--vertical-spacing);
                 border-top: 1px solid variables.$color-gray-2;
@@ -1217,14 +1228,14 @@ ul.nav{
         }
         > a{
             white-space: nowrap;
-            letter-spacing: 3px;
-            letter-spacing: 0.1875em;
+            // letter-spacing: 3px;
+            // letter-spacing: 0.1875em;
             // padding-inline: 0.5em;
-            &:not(li.contains-button > a){
+            &:not(li.contains-button > a,li.show-link-as-button >a){
                 display: block;
                 @media (max-width: responsive.$mobile-max){
                     padding-block: 0.2em;
-                    font-size: 26px;
+                    // font-size: 26px;
                 }
                 @media (min-width: responsive.$non-mobile-min){
                     padding-block: 0.33em;
@@ -1254,28 +1265,14 @@ ul.nav{
             }
         }
         a{
-            font-size: 18px;
-            letter-spacing: 3.6px;
-            letter-spacing: 0.1875;
-            @media (min-width: responsive.$non-mobile-min){
-                letter-spacing: 1.5px;
-                letter-spacing: 0.09375em;
-                font-size: 15px;
-            }
-        }
-    }
-    > li.oversized-sub-menu{
-        @media (min-width: responsive.$non-mobile-min){
-            --extra-width: 2.3em;
-            > a{
-                padding-left: 1.5em !important;
-                padding-right: 2.5em !important;
-            }
-            > a::after,
-            > .sub-menu{
-                left: calc(-1 * var(--extra-width) / 2); 
-                width: calc(100% + var(--extra-width));
-            }
+            // font-size: 18px;
+            // letter-spacing: 3.6px;
+            // letter-spacing: 0.1875;
+            // @media (min-width: responsive.$non-mobile-min){
+            //     letter-spacing: 1.5px;
+            //     letter-spacing: 0.09375em;
+            //     font-size: 15px;
+            // }
         }
     }
     // .sub-menu-toggle{
@@ -1301,7 +1298,7 @@ ul.nav{
                         display: block;
                         height: 4px;
                         width: 100%;
-                        background-color: variables.$color-yellow;
+                        background-color: variables.$color-brand-orange;
                         position: absolute;
                         bottom: 0;
                         left: -100%;
@@ -1905,26 +1902,6 @@ body.error404 {
 .paged-1 {}
 
 
-.main-footer-top,
-.event-upcoming-list.mq-mobileonly{
-    &:has(.swiper){
-        grid-column: full-width;
-        .event-slider-pagination{
-            --swiper-pagination-color: #{variables.$color-yellow};
-
-        }
-        .em-list.em-events-list.swiper-wrapper{
-            @media (max-width: responsive.$mobile-max){
-                // padding-left: 30px;
-            }
-            padding-top: 2em;
-            padding-bottom: 3em;
-        }
-        .swiper-slide{
-            height: unset;
-        }
-    }
-}
 .main-footer-top{
     .button-container{
         padding-inline: 30px;
@@ -2226,7 +2203,12 @@ div[class*="block-"]{
         &:not([class*="button"],h3 a,h2 a,h1 a){
             text-decoration: underline;
             text-underline-offset: 6px;
-            color: variables.$color-green-1;
+            color: variables.$color-link;
+            transition: color 0.3s ease-in-out;
+            &:focus,
+            &:hover{
+                color: variables.$color-link-hover;
+            }
         }
     }
     a:not(.button,[class*="button"],.cs-bgcolor-russet-brown a){
@@ -2443,125 +2425,6 @@ div[class*="block-"]{
 }
 
 
-/*********************
-AGE GATE
-*********************/
-
-.age-gate__wrapper.age-gate__wrapper{
-    --ag-form-background: transparent;
-    --ag-text-error-color: #{variables.$color-green-pale};
-    @media (max-width: responsive.$mobile-max){
-        padding-inline: 0;
-    }
-    .age-gate__challenge,
-    p.age-gate__challenge{
-        @extend .h1;
-        position: relative;
-        margin-bottom: 1em;
-        color: #fff !important;
-    }
-    .age-gate__submit{
-        @extend .box-button;
-        padding: 0.75em 3em;
-        &.age-gate__submit--yes{}
-        &.age-gate__submit--no{}
-
-    } 
-    .age-gate__remember-text{
-        text-transform: uppercase;
-        font-size: 15px;
-        @extend .font-futurapt-bold;
-        letter-spacing: 0.1em;
-    }
-    input[type="checkbox"]{
-        // accent-color: #fff;
-    }
-}
-
-/*********************
-TAB STYLES (GUTENA TABS)
-*********************/
-.gutena-tabs-content{
-    padding-block: var(--gutena--tabs-tab-container-padding);
-    // padding-inline: 0;
-    grid-column: full-width;
-}
-
-
-.gutena-tabs-block .gutena-tabs-content{
-    padding-block: var(--block-vertical-inner-space);
-}
-
-.gutena-tabs-block>.gutena-tabs-tab>.gutena-tab-title.active,
-.gutena-tabs-block>.gutena-tabs-tab>.gutena-tab-title:hover,
-.gutena-tabs-block>.gutena-tabs-tab>.gutena-tab-title{
-    --gutena--tabs-tab-font-weight: 700;
-    --gutena--tabs-tab-active-border-bottom: 4px solid #{variables.$color-green-1};
-    --gutena--tabs-tab-hover-border-bottom: 3px solid #{variables.$color-green-1};
-    @extend .font-futurapt-bold;
-    letter-spacing: 0.12em;
-    background: transparent;
-}
-.gutena-tabs-block>.gutena-tabs-content>.gutena-tab-block{
-    // padding: var(--gutena--tabs-tab-container-padding) 0;
-    padding-inline: 0;
-    > .wp-block-group > .wp-block-group__inner-container,
-    > .wp-block-group.light-heading-w-two-columns > .wp-block-group__inner-container,
-    // &:has(.em.em-view-container),
-    .em.em-view-container{
-        @extend .twa-grid;
-    }
-    > h2,
-    > h3,
-    > h4,
-    > h5,
-    > h6,
-    > img,
-    > figure,
-    > table,
-    > iframe,
-    > p{
-        @extend .wrapper-faking-grid;
-    }
-}
-.wp-block-gutena-tabs{
-    z-index: 2;
-    .gutena-tabs-tab{
-        grid-column: full-width;
-        background-color: variables.$color-gray-3;
-        position: sticky;
-        top: var(--offset-top);
-        @media (max-width: responsive.$mobile-max){
-            // top: 116px;
-        }
-        @media (min-width: responsive.$non-mobile-min){
-            top: var(--offset-top-w-header);
-
-            // top: 80px;
-            // body.admin-bar &{
-            //     top: 112px;
-            // }
-        }
-        z-index: 6;
-    }
-    .gutena-tab-title{
-        margin-bottom: 0;
-    }
-    .gutena-tabs-content{
-        z-index: 3;
-    }
-    .em-item-desc,
-    .em-item-meta-line.em-event-location{
-        display: none !important;
-    }
-}
-.block-twa-hero.hero-type--green-image-header + .wp-block-gutena-tabs.gutena-tabs-block,
-.block-image-slider + .wp-block-gutena-tabs.gutena-tabs-block{
-    margin-top: -3em;
-    @media (min-width: responsive.$non-mobile-min){
-        // margin-top: -5.7em; // NOTE: FAILED ON /events (overlaps hero block)
-    }
-}
 
 
 
@@ -2570,6 +2433,7 @@ SCREEN READER STYLES
 ******************************************************************/
 
 /* Text meant only for screen readers. */
+.sr-only,
 .screen-reader-text {
     position: absolute !important;
     overflow: hidden;
@@ -2577,29 +2441,29 @@ SCREEN READER STYLES
     width: 1px;
     height: 1px;
     white-space: nowrap;
+    &:focus {
+        top: 5px;
+        left: 5px;
+        z-index: 100000;
+    
+        /* Above WP toolbar. */
+        display: block;
+        clip: auto !important;
+        padding: 15px 23px 14px;
+        width: auto;
+        height: auto;
+        border-radius: 3px;
+        background-color: #f1f1f1;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+        color: #21759b;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.875rem;
+        font-size: 14px;
+        line-height: normal;
+    }
 }
 
-.screen-reader-text:focus {
-    top: 5px;
-    left: 5px;
-    z-index: 100000;
-
-    /* Above WP toolbar. */
-    display: block;
-    clip: auto !important;
-    padding: 15px 23px 14px;
-    width: auto;
-    height: auto;
-    border-radius: 3px;
-    background-color: #f1f1f1;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-    color: #21759b;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.875rem;
-    font-size: 14px;
-    line-height: normal;
-}
 
 /******************************************************************
 PAGE NAVI STYLES

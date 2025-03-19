@@ -16,24 +16,25 @@ _gutenberg.scss file.
 
 ******************************************************************/
 
+// normalize: http://necolas.github.io/normalize.css/
+@use "partials/normalize";
+
+// Sass variables
+@use "partials/variables";
+
+// typography
+@use "partials/typography";
+
+// Sass functions
+@use "partials/functions";
+
+// import mixins
+@use "partials/mixins";
+
 /* Wrap the entire post style inside the TinyMCE selector, as suggested
 here http://codex.wordpress.org/Function_Reference/add_editor_style */
 body#tinymce.wp-editor {
 
-	// normalize: http://necolas.github.io/normalize.css/
-	@import "partials/normalize";
-
-	// Sass variables
-	@import "partials/variables";
-
-	// typography
-	@import "partials/typography";
-
-	// Sass functions
-	@import "partials/functions";
-
-	// import mixins
-	@import "partials/mixins";
 
 		/*********************
 		LARGER MOBILE DEVICES
@@ -92,7 +93,7 @@ body#tinymce.wp-editor {
 
 	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     margin: 1.333em 0 0.5em;
-    color: lighten($color-black, 12%);
+    color: lighten(variables.$color-black, 12%);
     font-weight: 500;
     line-height: 1.2;
     text-rendering: optimizelegibility;
