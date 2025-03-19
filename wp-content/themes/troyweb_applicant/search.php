@@ -4,7 +4,7 @@
 
 		<div id="inner-content">
 
-			<main id="main" class="main npc-grid" role="main">
+			<main id="main" class="main twa-grid" role="main">
 
 				<div class="section-page-green text-align-center">
 					<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'troywebapplicant' ); ?></span> <span class="terms color-black"><?php echo esc_attr(get_search_query()); ?></span></h1>

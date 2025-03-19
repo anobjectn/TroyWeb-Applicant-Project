@@ -4,7 +4,7 @@
 
 		<div id="inner-content">
 
-			<main id="main" class="main npc-grid" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog"><?php 
+			<main id="main" class="main twa-grid" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog"><?php 
 				get_template_part( 'templates/hero-slider' );
 				get_template_part( 'templates/interior-page', 'header' );?>		
 				<article id="post-not-found" class="hentry">

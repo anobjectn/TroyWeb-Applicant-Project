@@ -1,4 +1,4 @@
-<footer id="main-footer" class="main-footer npc-grid" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
+<footer id="main-footer" class="main-footer twa-grid" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
 	<div class="main-footer-top no-v-padding-bottom"><?php 
 		
 		// cfdump($extra_footer_type);

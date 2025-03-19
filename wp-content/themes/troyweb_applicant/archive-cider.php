@@ -4,7 +4,7 @@
 
 		<div id="inner-content" class="">
 
-			<main id="main" class="main npc-grid" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog">
+			<main id="main" class="main twa-grid" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog">
                 <h1 class="nosho">Our Cider</h1><?php 
 
 				$ph_textual = get_acf_field('our_cider_header_textual','option');

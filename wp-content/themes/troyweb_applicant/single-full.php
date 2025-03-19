@@ -13,7 +13,7 @@
 
 		<div id="inner-content" class="unwrap">
 
-			<main id="main" class="main npc-grid" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog">
+			<main id="main" class="main twa-grid" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog">
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

@@ -873,11 +873,12 @@ HEADER STYLES
 .main-header {
     // overflow-x: hidden;
     // overflow-y: visible;
-    color: variables.$color-white;
+    // color: variables.$color-white;
+    background-color: var(--color-white);
     a{
-        color: variables.$color-white;
+        color: variables.$color-text;
         &.active{
-            color: variables.$color-yellow;
+            color: variables.$color-brand-orange;
         }
     }
     transition: all 0.3s ease-in-out;

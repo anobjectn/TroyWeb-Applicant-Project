@@ -2,7 +2,7 @@
 
 <div id="content">
 	<div id="inner-content">
-		<main id="main" class="main npc-grid" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog"><?php
+		<main id="main" class="main twa-grid" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog"><?php
 		
 			// get_template_part( 'blocks/_blocks.php' );]
 			
@@ -15,7 +15,7 @@
                 //get_template_part( 'templates/content-sections', 'loop' );
             // endif;
 			?>
-			<div class="entry-content npc-grid full-width">
+			<div class="entry-content twa-grid full-width">
 				<?php 
 				$content = get_the_content();
 				if($content || !empty($content)):

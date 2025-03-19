@@ -14,8 +14,8 @@
 
 		<div id="inner-content">
 
-			<main id="main" class="main npc-grid" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog">
-				<div class="back-container npc-grid-col-wide no-vertical-padding"><a href="/our-cider" title="Back to Our Cider page"><img src="<?php echo get_theme_file_uri(); ?>/library/images/arrow-circle-left.svg" width="46" height="46" class="style-svg"></a></div>
+			<main id="main" class="main twa-grid" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog">
+				<div class="back-container twa-grid-col-wide no-vertical-padding"><a href="/our-cider" title="Back to Our Cider page"><img src="<?php echo get_theme_file_uri(); ?>/library/images/arrow-circle-left.svg" width="46" height="46" class="style-svg"></a></div>
 				<div class="cider-single-row">
 					<div class="cider-single-col-main text-align-center">
 						<h1><?php the_title(); ?></h1><?php
@@ -112,7 +112,7 @@
 
 				$cider_images = get_acf_field( 'images' );
 				if(is_non_empty_array($cider_images)):?>
-					<div class="cider-image-slider npc-grid full-width">
+					<div class="cider-image-slider twa-grid full-width">
 						<div class="cider-image-slider-outer">
 							<div class="cider-image-slider-inner"><?php 
 								foreach ($cider_images as $cider_image):

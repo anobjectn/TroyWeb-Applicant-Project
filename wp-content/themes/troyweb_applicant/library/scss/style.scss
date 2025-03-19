@@ -45,7 +45,7 @@ the whole project.
 // import mixins
 @use "partials/responsive";
 
-@import "partials/grid";
+@use "partials/grid";
 
 /**
 * Gutenberg Styles.
@@ -67,13 +67,13 @@ you hate oysters, then the world is your peanut butter & jelly sandwich.
 *********************/
 
 // alert boxes
-@import "modules/alerts";
+@use "modules/alerts";
 
 // buttons
-@import "modules/buttons";
+@use "modules/buttons";
 
 // forms (inputs & labels)
-@import "modules/forms";
+@use "modules/forms";
 
 /*********************
 BASE STYLESHEET
@@ -83,7 +83,7 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 *********************/
 
 // styles in base.scss
-@import "breakpoints/base";
+@use "breakpoints/base";
 
 
 /*********************
@@ -92,7 +92,5 @@ Feel free to customize this. Remember to add things that won't make
 sense to print at the bottom. Things like nav, ads, and forms should
 be set to display none.
 *********************/
-@media print {
-    // styles in print.scss
-    @import "partials/print";
-}
+@use "partials/print";
+

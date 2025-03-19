@@ -48,9 +48,9 @@
 	<body <?php body_class(); ?> id="npc" itemscope itemtype="https://schema.org/WebPage">
 		<div id="container" class="main-content-container">
 
-			<header id="header" class="header main-header npc-grid" role="banner" itemscope itemtype="https://schema.org/WPHeader">
-                <div id="inner-header" class="inner-header-container full-width npc-grid">
-                    <div class="inner-header-row npc-grid-col-wide no-v-padding">
+			<header id="header" class="header main-header twa-grid" role="banner" itemscope itemtype="https://schema.org/WPHeader">
+                <div id="inner-header" class="inner-header-container full-width twa-grid">
+                    <div class="inner-header-row twa-grid-col-wide no-v-padding">
                         <div class="inner-header-base"><?php 
                             
                             if (has_custom_logo()): ?>    

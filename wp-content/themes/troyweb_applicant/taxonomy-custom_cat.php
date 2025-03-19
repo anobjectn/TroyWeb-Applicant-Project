@@ -18,7 +18,7 @@
 
 		<div id="inner-content" class="unwrap">
 
-			<main id="main" class="main npc-grid" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog">
+			<main id="main" class="main twa-grid" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog">
 
 				<?php // Edit the loop in /templates/archive-loop. Or roll your own. ?>
 				<?php get_template_part( 'templates/archive', 'loop'); ?>
