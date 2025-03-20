@@ -791,15 +791,9 @@ further. Using correct headings helps with readability, SEO, and accessibility.
 /* Heading defaults */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     margin: 0;
-    // text-transform: uppercase;
-    // color: lighten($sb-black, 12%);
-    // color: variables.$color-onyx;
-    // font-weight: 500;
     line-height: 1.2;
     text-rendering: optimizelegibility;
     letter-spacing: 0.01em;
-    // line-height: 1.2; capital letter width: 0.7
-    // change for your typeface.
     @include mixins.lhCrop(1.2, 0.7); 
 
     @extend .font-lato-bold;
@@ -827,17 +821,11 @@ h2, .h2 {
 }
 h1, .h1 {
     margin-top: 0;
-    // margin-bottom: 0.319em;
-    // font-size: 2.778em;
-    // font-size: 1rem;
     font-size: 3rem;
     color: variables.$color-brand-orange;
-    // letter-spacing: 0.2em;
-    // @include typography.responsive-font(30px, 36px, 1023px, 1440px);
     &.single-title{
         letter-spacing: 0.15em;
         margin-bottom: 0.4em;
-        // @include typography.responsive-font(25px, 36px, 1023px, 1440px);
     }
 }
 
@@ -847,7 +835,6 @@ h2, .h2 {
     letter-spacing: -0.028em;
     font-size: 2.25rem; // target ( ~36px )
     margin-bottom: 0.2em;
-    // @include typography.responsive-font(30px, 36px, 1023px, 1440px);
 }
 
 h3, .h3 {
@@ -873,18 +860,12 @@ h6, .h6 {
 HEADER STYLES
 *********************/
 #container{
-    // width: 100vw;
-    // width: 100dvw;
-    // clip: rect(auto, auto, auto, auto);
     @media (max-width: responsive.$mobile-max){
         overflow-x: hidden;
     }
 }
 
 .main-header {
-    // overflow-x: hidden;
-    // overflow-y: visible;
-    // color: variables.$color-white;
     background-color: var(--color-white);
     a{
         color: variables.$color-text;
@@ -893,10 +874,6 @@ HEADER STYLES
         }
     }
     transition: all 0.3s ease-in-out;
-    // transition: transform 0.5s ease-out, background-color 0s linear;
-    // transform: translateY(0);
-    
-    // background-image: linear-gradient(to right, variables.$color-green-light, variables.$color-green-dark 80%);
     
     @media (max-width: responsive.$mobile-max){
 
@@ -926,15 +903,7 @@ HEADER STYLES
     }
 }
 
-// @media (min-width: responsive.$non-mobile-min){
-//     // FF on Windows was needing this, but 
-//     body:has(.hero-type--large-video) ,
-//     body:has(.hero-type--large-image) {
-//         .main-header{
-//             position: fixed;
-//         }
-//     }
-// }
+
 
 #logo-container{
     @media (max-width: responsive.$mobile-max){
@@ -981,11 +950,6 @@ HEADER STYLES
     align-items: center;
     justify-content: space-between;
 }
-
-// #logo-container{
-//     display: flex;
-//     justify-content: flex-end;
-// }
 
 .main-menu-toggler{
     --bar-thickness: 4px;
@@ -1432,47 +1396,6 @@ ul.nav{
 }
 
 
-.inner-page-header{
-    // border-bottom: 1px solid $color-quartz;
-    .iph-inner{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-h1.iph-current-page-name,
-.iph-current-page-name{
-    // @extend .font-ogg;
-    // color: variables.$color-onyx;
-    font-size: 24px;
-}
-.iph-bread-crumbs{
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    font-size: 11px;
-    a{
-        //  @extend .font-like-grotesk-medium;
-        // color: variables.$color-onyx;
-        text-transform: uppercase;
-        // color: variables.$color-golden-brown;
-        letter-spacing: 0.2em;
-        &:last-child{
-            // color: variables.$color-onyx;
-            cursor: default;
-            &:hover{
-                text-decoration: none;
-            }
-        }
-    }
-}
-
-.iph-bread-crumb-separator{
-    font-weight: bold;
-}
-
-
-
 
 
 
@@ -1486,31 +1409,11 @@ WORDPRESS BODY CLASSES
 style a page via class
 ********************/
 
-/*
-As you add pages, add your own body classes below if you 
-need page-specific styles.
-
-It's good practice to use .page-yourpage {} syntax here so 
-that you don't conflict with other classes. That's what
-the cool kids do.
-
-*/
 
 
 .rtl {}
 
-body.home {
-    #main > .entry-content > p:first-child{
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-    }
-    // background: url(../images/img-bg-4.jpg) $color-seashell no-repeat;
-    // background-size: 100% auto;
-    // background-position: top;
-
-
-}
+body.home {}
 
 .blog {}
 
@@ -1521,192 +1424,6 @@ body.home {
 /********************
 PATTERNS / PATTERN RELATED
 ********************/
-
-
-
-.heading-w-minicolumn,
-.wp-block-group.heading-w-minicolumn{
-    text-align: center;
-    h2,
-    .h2,
-    h3,
-    .h3{
-        font-size: 22px;
-        letter-spacing: 0.12em;
-        color: variables.$color-brand-orange;
-        @extend .font-futurapt-bold;
-
-        &.background-pale-green{
-            background-color: variables.$color-green-pale;
-            display: inline-block;
-            padding: 1.3em 2.25em;
-            margin: 0 auto 1.75em auto;
-        }
-    }
-    h3,
-    .h3{
-        margin-top: 1.75em;
-        & + p{
-            margin-top: 0;
-        
-        }
-        & ~ h3,
-        & ~ .h3{
-            margin-top: 2.25em;
-        }
-
-    }
-}
-
-.light-heading-w-two-columns,
-.wp-block-group.light-heading-w-two-columns{
-    text-align: center;
-    h2,
-    .h2{
-        display: block;
-        width: 100%;
-        font-size: 22px;
-        letter-spacing: 0.12em;
-        line-height: 1;;
-        color: variables.$color-brand-orange;
-        @extend .font-futurapt-bold;
-
-        &.background-pale-green{
-            background-color: variables.$color-green-pale;
-            padding: 1.3em 2.25em;
-            margin: 0 auto 1em auto;
-        }
-    }
-    @media (max-width: responsive.$mobile-max){
-        .block-image-slider{
-            --img-height: 232px;
-            margin-top: 0;
-            margin-bottom: 2em;
-            margin-inline: calc(var(--mobile-grid-outer-column-width) * -1);
-        }
-        .button{
-            display: block;
-            margin-inline: var(--mobile-grid-outer-column-width);
-        }
-    }
-    @media (min-width: responsive.$non-mobile-min){
-        .block-image-slider{
-            --img-height: 260px;
-            margin-block: 0;
-            background-color: transparent;
-            padding-block: 1.5em;
-        }
-        .image-strip-inner {
-            box-shadow: 0 0 20px 0 rgba(39, 39, 39, 0.2);
-        }
-        :where(.wp-block-columns.is-layout-flex) {
-            gap: 0;
-            display: grid;
-            grid-template-columns: 1fr 0.85fr;
-            .wp-block-column:not(:has(.image-strip-inner)){
-                padding-left: 12%;
-                padding-right: 22%;
-                // color: red !important;
-            }
-            &:has(.wp-block-column:first-child .image-strip-inner){
-                grid-template-columns: 0.85fr 1fr;
-                .wp-block-column:not(:has(.image-strip-inner)){
-                    padding-right: 12%;
-                    padding-left: 22%;
-                    // color: red !important;
-                }
-            }
-        }
-    }
-}
-
-
-
-.page-header{
-    .page-header-textual{
-        text-align: center;
-    }
-    &.page-header-w-visual{
-        @media (max-width: responsive.$mobile-max){
-             .page-header-visual{
-                text-align: center;
-                line-height: 0.5;
-                video{
-                    max-width: 100%;
-                    height: auto;
-                    max-height: 320px;
-                }
-             }
-        }
-        @media (min-width: responsive.$non-mobile-min){
-            // display: flex;
-            display: grid;
-            grid-template-columns: 1fr 0.5fr .1fr;
-            gap: 0;
-            align-items: center;
-            .page-header-textual{
-                grid-column: 1 / 2;
-            }
-            .page-header-visual{
-                grid-column: 2 / 3;
-                line-height: 0;
-                position: relative;
-                img{
-                    width: 100%;
-                    height: auto;
-                }
-                video{
-                    max-height: 344px;
-                    width: auto;
-                }
-            }
-        }
-    }
-}
-
-.filter-able-list{
-    .filtered-out{
-        display: none !important;
-    }
-}
-.tab-like-filters{
-    background-color: variables.$color-green-pale;
-    margin-bottom: 1em;
-    position: sticky;
-    top: var(--offset-top-w-header);
-    z-index: 8;
-    ul{
-        display: flex;
-        justify-content: center;
-    }
-    button{
-        @extend .font-futurapt-bold;
-        color: variables.$color-gray-1;
-        font-size: 16px;
-        letter-spacing: 0.1em;
-        border-radius: 0;
-        padding: 0.5em 1em;
-        border: none;
-        border-bottom: 4px solid transparent;
-        transition: all 0.3s ease-in-out;
-        text-transform: uppercase;
-        &.active{
-            background-color: transparent;
-            color: variables.$color-brand-orange;
-            border-bottom: 4px solid variables.$color-brand-orange;
-
-        }
-    }
-    @media (min-width: responsive.$non-mobile-min){
-        button{
-            padding-block: 0.9em;
-        }
-        ul{
-            gap: .75em;
-        }
-    }
-}
-
 
 
 
@@ -1945,29 +1662,6 @@ h3.footer-headline{
 
 }
 
-
-.em-item-info{
-    text-align: center;
-    padding: 1em 2em 0 2em;
-}
-
-.em-event.em-item{
-    background-color: #fff;
-    color: variables.$color-black;
-    position: relative;
-    box-shadow: 0 4px 10px 0 rgba(39, 39, 39, 0.2);
-}
-
-.em-event-meta.em-item-meta{
-    padding-bottom: 1em;
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    @extend .font-futurapt-bold;
-    font-size: 14px;
-    color: variables.$color-brand-orange;
-    text-transform: uppercase;
-}
 
 
 

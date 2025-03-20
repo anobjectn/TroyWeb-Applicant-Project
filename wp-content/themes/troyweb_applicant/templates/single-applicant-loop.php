@@ -21,12 +21,17 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" itemscope itemprop="blogPost" itemtype="https://schema.org/BlogPosting">
 
-		<h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
-
-		<div class="twa-post-row">
-			<section class="entry-content" itemprop="articleBody">
-				<header class="article-header entry-header">
-
+        
+        <div class="twa-post-row">
+            <section class="entry-content" itemprop="articleBody">
+                <header class="article-header entry-header"><?php
+                    if ( has_post_thumbnail() ):?>
+                        <div class="twa-post-banner-image-container default-feature-image-only no-banner"><?php 
+                            the_post_thumbnail('wide-xl'); ?>
+                        </div><?php 
+                    endif; ?>
+                    
+                    <h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
 						
 				</header> <?php // end article header ?>
 		
