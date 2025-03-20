@@ -855,17 +855,17 @@ h3, .h3 {
 }
 
 h4, .h4 {
-    font-size: 1.22225em; // target ( ~22px )
+    font-size: 1.66rem; // target ( ~22px )
 }
 
 h5, .h5 {
-    font-size: 1em;  // target ( ~18px )
+    font-size: 1.5rem;  // target ( ~18px )
 }
 
 h6, .h6 {
     text-transform: uppercase;
     // letter-spacing: 4.333px;
-    font-size: 0.833335em;  // target ( ~15px )
+    font-size: 1.25rem;  // target ( ~15px )
 }
 
 /*********************
@@ -932,6 +932,10 @@ HEADER STYLES
 #logo-container{
     @media (max-width: responsive.$mobile-max){
         padding-block: 1.3em;
+        img{
+            height: 45px;
+            width: auto;
+        }
     }
     svg .lines{
         transition: fill 0.3s ease-out;
@@ -1008,7 +1012,7 @@ HEADER STYLES
     #header.main-menu-open &,
     body.mobile-header-scrolled-above &{
         position: fixed;
-        top: 36px;
+        top: 26px;
         right: 15px;
         background-color: rgba(39, 39, 39, 0.2);
         background-blend-mode: multiply;
@@ -1072,7 +1076,7 @@ HEADER STYLES
 
 .search-container{
     // padding-left: calc(2 * var(--side-column-width));
-    padding-top: 2.0em;
+    padding-top: 1em;
 }
 
 .a-menu-link{
@@ -1165,6 +1169,12 @@ ul.nav{
             height: 40px;
             // border-radius: 20px;
             color: variables.$color-grey;
+            text-decoration: none;
+            &:focus,
+            &:hover{
+                text-decoration: none;
+                color: variables.$color-brand-orange;
+            }
             span{
                 @extend .sr-only;
             }
@@ -1174,9 +1184,11 @@ ul.nav{
         }
         @media (min-width: responsive.$non-mobile-min){
             justify-content: flex-start;
-            gap: 1.25em;
+            gap: 1em;
+            padding-block: 0;
+
             a{
-                font-size: 24px;
+                font-size: 36px;
             }
         }
     }
@@ -1249,8 +1261,8 @@ ul.nav{
             > a{
                 background-color: variables.$color-brand-orange;
                 color: variables.$color-white;
-                padding-block: 0.4em;
-                padding-inline: 0.75em;
+                padding-block: 0.3em;
+                padding-inline: 0.5em;
                 border-radius: 0.4em;
                 border: 3px solid variables.$color-brand-orange;
                 transition: all 0.3s ease-in-out;
@@ -2480,7 +2492,6 @@ FOOTER STYLES
     position: relative;
     // color: variables.$color-white;
     text-align: center;
-    letter-spacing: .06em;
     padding-block: 0.5em;
     border-top: 1rem solid variables.$color-brand-dark;
     @media (max-width: responsive.$mobile-max){
@@ -2549,29 +2560,7 @@ FOOTER STYLES
         font-size: 24px;
     }
 }
-.footer-menus{
-    margin-block: 0;
-    padding-block: 0.5em;
-    display: flex;
-    text-align: left;
-    li + li{
-        margin-top: 1.2em;
-    }
-    > div{
-        flex: 1;
-        flex-basis: 100%;
-    }
-    a{
-        @extend .font-futurapt-medium;
-        font-size: 18px;
-        text-transform: unset;
-    }
-    @media (max-width: responsive.$mobile-max){
-        // margin-top: 3em;
 
-
-    }
-}
 .main-footer-top{
     > *:last-child{
         margin-bottom: 2em;
@@ -2588,94 +2577,33 @@ FOOTER STYLES
             color: #fff;
         }
     }
-    .legal-links{
-        --h-spacing: 1em;
-        li{
-            margin-left: var(--h-spacing);
-            padding-left: var(--h-spacing);
-            border-left: 1px solid variables.$color-white;
-            &:first-child{
-                margin-left: 0;
-                padding-left: 0;
-                border-left: none;
-            }
-        }
-    }
+
 }
-.tel-link{
-    @extend .font-futurapt-bold;
-    font-size: 17px;
-    letter-spacing: 1.02px;
-    letter-spacing: 0.06em;
-    i[class*='fa-']{
-        color: variables.$color-yellow;
-        margin-right: 0.5em;
-    }
-}
+
 @media (min-width: responsive.$non-mobile-min){
     .main-footer-middle.main-footer-middle{
         padding: 0;
         padding-top: 2em;
         padding-inline: 8.5%;
-        display: grid;
-        grid-template-columns: .423fr .577fr;
-        grid-template-columns: 0.68fr 1fr;
-        grid-template-rows: .74fr 1fr;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
         .back-to-top{
             left: calc(89.5% - var(--size)*.5);
         }
     }
-    .branding-and-info{
-        grid-column: 1 / 2;
-        grid-row: 1 / 3;
-        align-self: center;
-        display: flex;
-        flex-direction: column;
-        width: max-content
-    }
-    .footer-menus{
-        border-top: none;
-        border-bottom: none;
-        padding-top: 1em;
-        li + li{
-            margin-top: 0.8em;
-        }
-        a{
-            font-size: 15px;
-        }
-    }
-    .menus-and-contact{
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-    }
-    .contacts-container{
-        padding-top: 1em;
-        padding-left: 2ch;
-        text-align: left;
-    }
     .main-footer-bottom{
-        grid-column: content !important;
-        text-align: left;
+    
         display: flex;
         align-items: center;
-        gap: 1em;
+        justify-content: center;
+        .copyright br{
+            display: none;
+        }
     }
 }
-.extra-footer-cta-container{
-    display: flex;
-    flex-direction: column;
-    gap: 1.25em;
-    .cta-text{
-        @extend .font-futurapt-bold;
-        font-size: 22px;
-        line-height: 1.2;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: variables.$color-white;
-        margin-bottom: 1em;
 
-    }
-}
 @media (max-width: responsive.$mobile-max){
     .twa-grid > .main-footer-top{
         grid-column: inner-box;

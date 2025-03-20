@@ -16,27 +16,21 @@
 		
 
 		</div>
-		<div class="menus-and-contact">
-			<div class="footer-menus">
-				<div class="col1">
-					<div class="col1-inner">
-						<nav role="navigation"><?php 
-							wp_nav_menu([
-								'container' => '',
-								'menu' => 'social-networks-menu',
-								'menu_class' => 'nav nav-h social-networks-menu',
-								'depth' => 0,
-								'fallback_cb' => false,
-							]);?> 
-						</nav>
-					</div>
-				</div>
-			</div>
+		<div class="connect">
+			<nav role="navigation"><?php 
+				wp_nav_menu([
+					'container' => '',
+					'menu' => 'social-networks-menu',
+					'menu_class' => 'nav nav-h social-networks-menu',
+					'depth' => 0,
+					'fallback_cb' => false,
+				]);?> 
+			</nav>
 		</div>
-		<a href="#npc" class="back-to-top" aria-label="Back to top"><i class="fa-regular fa-arrow-up-to-line"></i></a>
+		<!-- <a href="#top" class="back-to-top" aria-label="Back to top"><i class="fa-regular fa-arrow-up-to-line"></i></a> -->
 	</div>
 	<div class="main-footer-bottom">
-		<p class="source-org copyright small-text">&copy; <?php echo date('Y'); ?> Troy Web Consulting.<br>All rights reserved.</p>
+		<p class="source-org copyright small-text">&copy; <?php echo date('Y'); ?> Troy Web Consulting. <br> All rights reserved.</p>
 	</div>
 </footer>
 
