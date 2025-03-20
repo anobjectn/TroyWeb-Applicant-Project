@@ -24,7 +24,7 @@
 							wp_nav_menu([
 								'container' => '',
 								'menu' => 'social-networks-menu',
-								'menu_class' => 'nav nav-h',
+								'menu_class' => 'nav nav-h social-networks-menu',
 								'depth' => 0,
 								'fallback_cb' => false,
 							]);?> 

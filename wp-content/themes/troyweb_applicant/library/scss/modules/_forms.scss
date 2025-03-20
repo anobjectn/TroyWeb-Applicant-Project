@@ -155,7 +155,7 @@ select.minimal{
     .search-field{
         border-radius: 30px;
         padding: 0.75em 2.5em 0.75em 0.75em;
-        min-width: 30ch;
+        // min-width: 30ch;
     }
     .search-submit{
         position: absolute;
@@ -164,7 +164,7 @@ select.minimal{
         top: 0;
         border: none;
         background: transparent;
-        color: variables.$color-green-2;
+        color: variables.$color-brand-dark;
         font-size: 22px;
     }
     .minimal-form &{

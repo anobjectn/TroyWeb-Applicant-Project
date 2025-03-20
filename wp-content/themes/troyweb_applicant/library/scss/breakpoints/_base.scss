@@ -88,22 +88,22 @@ body {
 
 #main{
     // scrollbar-gutter: stable;
-    &:not(:has(.block-twa-hero,>.entry-content>.special-gray-background)){
-        padding-block: 3.5em;
-        body.single-event &,
-        body.single-cider &{
-            padding-top: 1.75em;
-        }
-    }
-    &:has( > .section-page-green:first-child),
-    &:has(> .entry-content > .gform_wrapper:first-child){
-        padding-top: 0;
-    }
+    // &:not(:has(.block-twa-hero,>.entry-content>.special-gray-background)){
+    //     padding-block: 3.5em;
+    //     body.single-event &,
+    //     body.single-cider &{
+    //         padding-top: 1.75em;
+    //     }
+    // }
+    // &:has( > .section-page-green:first-child),
+    // &:has(> .entry-content > .gform_wrapper:first-child){
+    //     padding-top: 0;
+    // }
 
-    &:has(> .entry-content > .block-image-w-block:last-child),
-    &:has(> .entry-content > .block-image-slider:last-child){
-        padding-bottom: 0;
-    }
+    // &:has(> .entry-content > .block-image-w-block:last-child),
+    // &:has(> .entry-content > .block-image-slider:last-child){
+    //     padding-bottom: 0;
+    // }
 }
 
 img {
@@ -898,20 +898,7 @@ HEADER STYLES
     // background-image: linear-gradient(to right, variables.$color-green-light, variables.$color-green-dark 80%);
     
     @media (max-width: responsive.$mobile-max){
-        // .inner-header-row{
-        //     overflow-x: hidden;
-        // }
-        body:has(.hero-type--large-video) &,
-        body:has(.hero-type--large-image) &{
-            position: fixed;
-            left: 0;
-            width: 100%;
-            z-index: 9;
-            background: transparent;
-            #logo-container{
-                display: none;
-            }
-        }
+
         &.mobile-invisible-header{
             background-image: linear-gradient(to right, rgba(42, 172, 72, 0), rgb(32, 132, 55, 0) 80%)
         }
@@ -919,10 +906,6 @@ HEADER STYLES
     @media (min-width: responsive.$non-mobile-min){
         grid-template-rows: auto;
         position: sticky;
-        body:has(.hero-type--large-video) &,
-        body:has(.hero-type--large-image) &{
-            position: fixed;
-        }
         top: var(--offset-top);
         left: 0;
         width: 100%;
@@ -1023,7 +1006,7 @@ HEADER STYLES
         position: fixed;
         top: 36px;
         right: 15px;
-        background-color: rgba(39, 39, 39, 0.5);
+        background-color: rgba(39, 39, 39, 0.2);
         background-blend-mode: multiply;
     }
 
@@ -1039,7 +1022,7 @@ HEADER STYLES
         position: absolute;
         height: var(--bar-thickness);
         width: 100%;
-        background: variables.$color-yellow;
+        background: variables.$color-text;
         border-radius: var(--bar-thickness);
         opacity: 1;
         left: 0;
@@ -1114,7 +1097,7 @@ NAVIGATION STYLES
         position: fixed;
         z-index: 11;
         inset: 0;
-        background-color: variables.$color-brand-dark;
+        background-color: variables.$color-neutral;
         width: 100dvw;
         height: 100dvh;
         left: 101dvw;
@@ -1153,6 +1136,11 @@ ul.nav{
             justify-content: center;
         }
     }
+    &.nav-h{
+        li + li{
+            margin-top: 0;
+        }
+    }
     &.nav-v{
         flex-direction: column;
         // >li+li{
@@ -1160,7 +1148,7 @@ ul.nav{
         // }
     }
 
-    &.social-list{
+    &.social-networks-menu{
         justify-content: space-evenly;
         padding-block: 1.45em;
         a{
@@ -1170,6 +1158,10 @@ ul.nav{
             width: 40px;
             height: 40px;
             border-radius: 20px;
+            color: variables.$color-grey;
+            span{
+                @extend .sr-only;
+            }
             // background-color: variables.$color-golden-brown;
             // color: variables.$color-seashell;
             aspect-ratio: 1 / 1;
@@ -1239,10 +1231,30 @@ ul.nav{
                 }
                 @media (min-width: responsive.$non-mobile-min){
                     padding-block: 0.33em;
-                    padding-inline: 1em;
+                    padding-inline: 0.5em;
                     &:is(li.menu-item-has-children > a){
                         padding-right: 1.5em;
                     }
+                }
+            }
+        }
+        &.contains-button,
+        &.show-link-as-button{
+            > a{
+                background-color: variables.$color-brand-orange;
+                color: variables.$color-white;
+                padding-block: 0.4em;
+                padding-inline: 0.75em;
+                border-radius: 0.4em;
+                border: 3px solid variables.$color-brand-orange;
+                transition: all 0.3s ease-in-out;
+                &:focus,
+                &:hover{
+                    background-color: variables.$color-white;
+                    color: variables.$color-brand-orange;
+                }
+                @media (max-width: responsive.$mobile-max){
+                    margin-top: 1.5em;
                 }
             }
         }
@@ -1289,7 +1301,7 @@ ul.nav{
         // justify-content: center;
         > li{
             border-top: none !important;
-            &:not(.contains-button){                                                                                                                      
+            &:not(.contains-button,.show-link-as-button){                                                                                                                      
                 > a{
                     overflow: hidden;
                     position: relative;
@@ -1317,6 +1329,7 @@ ul.nav{
                     }
                 }
             }
+
         }
         
         .sub-menu{
@@ -1747,7 +1760,7 @@ body.search-results {
     }
     .entry-title,
     .entry-title a{
-        color: variables.$color-green-1;
+        color: variables.$color-brand-orange;
         text-decoration: none;
         transition: all 0.3s ease-in-out;
     }
@@ -2611,8 +2624,6 @@ FOOTER STYLES
     padding-block: 2.5em;
     display: flex;
     text-align: left;
-    border-top: 4px solid variables.$color-green-2;
-    border-bottom: 4px solid variables.$color-green-2;
     li + li{
         margin-top: 1.2em;
     }
@@ -2626,7 +2637,7 @@ FOOTER STYLES
         text-transform: unset;
     }
     @media (max-width: responsive.$mobile-max){
-        margin-top: 3em;
+        // margin-top: 3em;
         li{
             padding-left: 1.5ch;
         }

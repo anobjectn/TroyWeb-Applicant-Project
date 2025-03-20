@@ -21,7 +21,7 @@
             title="<?php echo esc_attr_x( 'Search for:', 'label', 'troywebapplicant' ) ?>" />
 
         <button type="submit" class="search-submit" aria-label="Submit search form">
-            <i class="fa-regular fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i>
         </button>
     </div>
     
