@@ -1470,10 +1470,29 @@ body.single-applicant{
     .applicant-meta-container{
         position: relative;
         .meta-facet{
+            position: relative;
             display: flex;
             justify-content: center;
             gap: 0.5ch;
-            margin-block: 1.5em;
+            margin-block: 0.7em;
+            padding-block: 0.5em;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 76%;
+                height: 100%;
+                background-color: variables.$color-highlight;
+                z-index: 1;
+                clip-path: polygon(0 49%, 90% 3%, 100% 72%, 1% 78%);
+                clip-path: polygon(0 33%, 96% 0, 100% 72%, 0 87%);
+
+            }
+            div{
+                position: relative;
+                z-index: 2;
+            }
         }
     }
     .twa-post-feature-image-container{
