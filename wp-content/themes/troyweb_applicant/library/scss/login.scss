@@ -19,20 +19,20 @@ body.login {
     // background-image: linear-gradient(to top, $color-green-2, $color-green-1);
 	// background-repeat: repeat-y;
 
-	background: linear-gradient(to bottom, $color-green-light, $color-green-dark 65%);
+	background: linear-gradient(to bottom, $color-neutral, $color-grey);
     
 	// background: url(../images/img-bg-4.jpg) brown no-repeat;
 	// background-position: center;
 	// background-size: cover;
-	&::before{
-		content: '';
-		position: absolute;
-		inset: 0;
-		background: url(../images/footer-texture_t.png) transparent no-repeat;
-        background-size: 100% auto;
-        background-position: top;
-        opacity: 0.4;
-	}
+	// &::before{
+	// 	content: '';
+	// 	position: absolute;
+	// 	inset: 0;
+	// 	background: url(../images/footer-texture_t.png) transparent no-repeat;
+    //     background-size: 100% auto;
+    //     background-position: top;
+    //     opacity: 0.4;
+	// }
 	h1 {
 		margin: 0 auto 1em auto;
 	}
@@ -42,7 +42,7 @@ body.login {
 	}
 	
 	input{
-		accent-color: $color-green-1;
+		accent-color: $color-brand-orange;
 		&:focus{
 			// border-color: $color-golden-brown;
 			// box-shadow: 0 0 0 1px $color-golden-brown;
@@ -76,15 +76,22 @@ body.login {
 	}
 }
 
-#wp-submit{
-	border-color: $color-green-2;
-	background-color: $color-green-1;
+#wp-submit.button{
+	border: 4px solid $color-brand-orange;
+	background-color: $color-brand-orange;
 	color: $color-white;
+	transition: all 0.3s ease-in-out;
+	border-radius: 4px;
+	&:focus,
+	&:hover{
+		background-color: $color-white;
+		color: $color-brand-orange;
+	}
 }
 
 #user_login,
 #user_pass{
-	background-color: $color-green-1-rgba-20;
+	background-color: $color-neutral;
 }
 
 #login {
@@ -111,17 +118,17 @@ Now with square image and retina by default.
 		margin: 0 auto;
 		width: 300px;
 		// height: 156px;
-		background: url(../images/npc-logo-rails@2x.png) no-repeat top center; /* make sure to replace this! */
+		background: url(../images/tw-logo-header.png) no-repeat top center; /* make sure to replace this! */
 		background-size: contain;
 		text-indent: -9999px;
 	}
 } 
 
-form {
+#loginform{
 	margin-left: 8px;
 	padding: 26px 24px 46px;
-	border: 1px solid #E5E5E5;
-	border-radius: 3px;
+	border: 4px solid $color-highlight;
+	border-radius: 6px;
 	background: white;
 	box-shadow: none;
 	font-weight: normal;

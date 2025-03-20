@@ -17,6 +17,46 @@
       "oAP" : "\/404.php",
       "oF" : 0
     },
+    "\/acf-json\/group_67db9689125b0.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_67db9689125b0-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/post_type_67db94e826bc3.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/post_type_67db94e826bc3-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/post_type_67db91778ba20.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/post_type_67db91778ba20-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/taxonomy_67db93aaabd6b.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/taxonomy_67db93aaabd6b-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/taxonomy_67db930a7895d.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/taxonomy_67db930a7895d-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
     "\/archive-cider.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2015,30 +2055,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/page.php",
-      "oF" : 0
-    },
-    "\/plugins\/events-manager\/formats\/event_list_item_format.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/plugins\/events-manager\/formats\/event_list_item_format.php",
-      "oF" : 0
-    },
-    "\/plugins\/events-manager\/formats\/single_event_format.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/plugins\/events-manager\/formats\/single_event_format.php",
-      "oF" : 0
-    },
-    "\/plugins\/events-manager\/templates\/events-list.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/plugins\/events-manager\/templates\/events-list.php",
       "oF" : 0
     },
     "\/readme.html" : {
