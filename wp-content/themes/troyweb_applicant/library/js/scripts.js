@@ -527,7 +527,7 @@ function setupMainHeirMenu() {
 }
 
 function setupMobileMenuToggle(){
-    let debug = true;
+    let debug = false;
     if(debug && window.console){
         console.log('setupMobileMenuToggle()');
     };
