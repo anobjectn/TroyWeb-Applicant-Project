@@ -19,8 +19,8 @@
 <?php 
 
 if (have_posts()) : ?>	
-	<div class="npc-posts">
-		<div class="npc-post-filters"><?php
+	<div class="twa-posts">
+		<div class="twa-post-filters"><?php
 			$post_categories = get_categories([
 				'orderby' => 'name',
 				'order'   => 'ASC',
@@ -28,7 +28,7 @@ if (have_posts()) : ?>
 			]);
 			$posts_per_page = 8;
 			$initial_page_count = ceil(wp_count_posts('post')->publish / $posts_per_page); ?> 
-			<ul class="post-filter-list nostyle" data-filter-collection="npc-post-card">
+			<ul class="post-filter-list nostyle" data-filter-collection="twa-post-card">
 				<li class="post-filter-li">
 					<button type="button" class="post-filter-button post-filter-by-category filter-button active" data-filter-term="all">All <i class="if-active fa-light fa-check" aria-hidden="true"></i></button>
 				</li><?php 
@@ -39,13 +39,13 @@ if (have_posts()) : ?>
 				endforeach; ?>
 			</ul>
 		</div>
-		<div class="npc-post-list filter-able-list" data-ppp="<?php echo $posts_per_page;?>"><?php 
+		<div class="twa-post-list filter-able-list" data-ppp="<?php echo $posts_per_page;?>"><?php 
 			global $wp_query;
 			while (have_posts()): 
 				the_post();
 				$this_posts_categories = get_the_category();
 				$post_classes = [
-					'npc-post-card',
+					'twa-post-card',
 				];
 				foreach( $this_posts_categories as $category ):
 					array_push($post_classes,'category-' . $category->slug);
@@ -59,23 +59,23 @@ if (have_posts()) : ?>
 				?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class($post_classes); ?> role="article" data-page="<?php echo $current_post_page_number;?>"><?php 
 					if ( has_post_thumbnail() ):?>
-						<div class="npc-post-card-visual"><?php 
+						<div class="twa-post-card-visual"><?php 
 							// get the --image-src
 						?>
-							<div class="npc-post-card-visual-inner" data-copy-img-src-to-closest=".npc-post-card-visual"><?php 
+							<div class="twa-post-card-visual-inner" data-copy-img-src-to-closest=".twa-post-card-visual"><?php 
 								the_post_thumbnail( 'plate-thumb-600' ); ?>
 							</div>
 						</div><?php 
 					else:?>
-						<div class="npc-post-card-visual not-available">
+						<div class="twa-post-card-visual not-available">
 							<div class="date">
 								<span class="day"><?php echo get_the_date('j');?></span>
 								<span class="month"><?php echo get_the_date('M');?></span>
 							</div>
 						</div><?php 
 					endif;?>
-					<div class="npc-post-card-textual">
-						<div class="npc-post-card-date"><?php
+					<div class="twa-post-card-textual">
+						<div class="twa-post-card-date"><?php
 							echo get_the_date('M j, Y'); ?></div>
 						<h3 class="h2 entry-title">
 							<?php the_title(); ?>

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<h1>single</h1>
+
 	<div id="content">
 
 		<div id="inner-content" class="unwrap"><?php
@@ -16,13 +16,8 @@
 			endif; ?>
 			<main id="main" class="main twa-grid" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog">
 				<div class="back-container twa-grid-col-wide no-vertical-padding"><a href="/blog/" title="Back to Our Blog page"><img src="<?php echo get_theme_file_uri(); ?>/library/images/arrow-circle-left.svg" width="46" height="46" class="style-svg"></a></div>
-				<?php // Edit the loop in /templates/single-loop. Or roll your own. ?>
-				<?php get_template_part( 'templates/single', 'loop'); ?>
-
+				<?php get_template_part( 'templates/single-applicant', 'loop'); ?>
 			</main>
-
-			<?php // related posts function; uncomment below to use ?>
-			<?php // plate_related_posts(); ?>
 
 		</div>
 

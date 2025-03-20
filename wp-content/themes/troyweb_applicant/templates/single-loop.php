@@ -23,7 +23,7 @@
 
 		<h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
 
-		<div class="npc-post-row">
+		<div class="twa-post-row">
 			<section class="entry-content" itemprop="articleBody">
 				<header class="article-header entry-header">
 		

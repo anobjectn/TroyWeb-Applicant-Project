@@ -535,7 +535,7 @@ function setupMobileMenuToggle(){
     const $firstMobileOnlyEle = jQuery('.mq-mobileonly').first();
     const bInMobileRange = $firstMobileOnlyEle.is(':visible');
     const $mainHeader = jQuery('#header');
-    const $largeHero = jQuery('.block-npc-hero.hero-type--large-image,.block-npc-hero.hero-type--large-video');
+    const $largeHero = jQuery('.block-twa-hero.hero-type--large-image,.block-twa-hero.hero-type--large-video');
     if(bInMobileRange && $mainHeader && $mainHeader.length){
         const scrollingHeaderObserver = new IntersectionObserver(function(entries) {
             if(debug && window.console){

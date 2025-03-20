@@ -16,13 +16,13 @@
  * 
  */
 ?>
-<div class="npc-post-list"><?php 
+<div class="twa-post-list"><?php 
 	if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<article id="post-<?php the_ID(); ?>" <?php post_class('npc-post-card'); ?> role="article">
-			<div class="npc-post-card-visual"><?php 
+		<article id="post-<?php the_ID(); ?>" <?php post_class('twa-post-card'); ?> role="article">
+			<div class="twa-post-card-visual"><?php 
 				the_post_thumbnail( 'plate-thumb-600' ); ?>
 			</div>
-			<div class="npc-post-card-textual">
+			<div class="twa-post-card-textual">
 				<h3 class="h2 entry-title">
 					<?php the_title(); ?>
 				</h3>

@@ -17,6 +17,7 @@ those viewpoints.
 @use "../partials/mixins";
 @use "../partials/responsive";
 @use "../partials/typography";
+@use "../modules/buttons";
 
 :root{
     --block-vertical-inner-space: 1rem;
@@ -28,7 +29,7 @@ those viewpoints.
     // --swiper-navigation-sides-offset: -20px;
     --swiper-pagination-bullet-width: 40px;
     --swiper-pagination-bullet-height: 6px;
-    --swiper-pagination-color: #{variables.$color-green-1};
+    --swiper-pagination-color: #{variables.$color-brand-orange};
     // --swiper-pagination-bullet-inactive-color: #{$color-quartz};
     --swiper-pagination-bullet-inactive-opacity: 0.32;
     --swiper-pagination-bullet-border-radius: 3px;
@@ -821,7 +822,7 @@ h1, .h1,
 h2, .h2 {
     letter-spacing: -0.021em;
     &:not(.block-twa-hero *){
-        // color: variables.$color-green-1;
+        // color: variables.$color-brand-orange;
     }
 }
 h1, .h1 {
@@ -919,7 +920,8 @@ HEADER STYLES
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-block: 1.8em;
+            margin-block-start: 1.8em;
+            margin-block-end: 1.1em;
         }
     }
 }
@@ -1264,18 +1266,7 @@ ul.nav{
         &.contains-button,
         &.show-link-as-button{
             > a{
-                background-color: variables.$color-brand-orange;
-                color: variables.$color-white;
-                padding-block: 0.3em;
-                padding-inline: 0.5em;
-                border-radius: 0.4em;
-                border: 3px solid variables.$color-brand-orange;
-                transition: all 0.3s ease-in-out;
-                &:focus,
-                &:hover{
-                    background-color: variables.$color-white;
-                    color: variables.$color-brand-orange;
-                }
+                @extend .brand-button;
                 @media (max-width: responsive.$mobile-max){
                     margin-top: 1.5em;
                 }
@@ -1372,13 +1363,13 @@ ul.nav{
                 transition: all 0.3s ease-in-out;
                 &:hover,
                 &:focus{
-                    color: variables.$color-green-1;
+                    color: variables.$color-brand-orange;
                 }
             }
             li.current-menu-item,
             li.current_page_item{
                 a{
-                    color: variables.$color-green-1;
+                    color: variables.$color-brand-orange;
                 }
             }
         }
@@ -1542,7 +1533,7 @@ PATTERNS / PATTERN RELATED
     .h3{
         font-size: 22px;
         letter-spacing: 0.12em;
-        color: variables.$color-green-1;
+        color: variables.$color-brand-orange;
         @extend .font-futurapt-bold;
 
         &.background-pale-green{
@@ -1577,7 +1568,7 @@ PATTERNS / PATTERN RELATED
         font-size: 22px;
         letter-spacing: 0.12em;
         line-height: 1;;
-        color: variables.$color-green-1;
+        color: variables.$color-brand-orange;
         @extend .font-futurapt-bold;
 
         &.background-pale-green{
@@ -1701,8 +1692,8 @@ PATTERNS / PATTERN RELATED
         text-transform: uppercase;
         &.active{
             background-color: transparent;
-            color: variables.$color-green-1;
-            border-bottom: 4px solid variables.$color-green-1;
+            color: variables.$color-brand-orange;
+            border-bottom: 4px solid variables.$color-brand-orange;
 
         }
     }
@@ -1819,7 +1810,7 @@ body.search-results {
 
 body.error404 {
     #content{
-        background-color: variables.$color-green-1;
+        background-color: variables.$color-brand-orange;
         color: variables.$color-white;
         // background-image: url(../images/empty-glass-60.jpg);
         background-image: url(../images/empty-glass_png8-32-950w_t.png);
@@ -1974,7 +1965,7 @@ h3.footer-headline{
     gap: 1em;
     @extend .font-futurapt-bold;
     font-size: 14px;
-    color: variables.$color-green-1;
+    color: variables.$color-brand-orange;
     text-transform: uppercase;
 }
 
@@ -2030,7 +2021,7 @@ ul.page-numbers,
         color: variables.$color-black;
         &.active,
         &.current{
-            background-color: variables.$color-green-1;
+            background-color: variables.$color-brand-orange;
             color: variables.$color-white;
         }
         // &:focus,
@@ -2264,7 +2255,7 @@ div[class*="block-"]{
     }
 
     tr {
-        border-bottom: 1px solid variables.$color-green-1;
+        border-bottom: 1px solid variables.$color-brand-orange;
 
         &:nth-child(even) {
             background-color: variables.$color-green-pale;
@@ -2273,7 +2264,7 @@ div[class*="block-"]{
 
     td {
         padding: 7px;
-        border-right: 1px solid variables.$color-green-1;
+        border-right: 1px solid variables.$color-brand-orange;
 
         &:last-child {
             border-right: 0;
@@ -2281,8 +2272,8 @@ div[class*="block-"]{
     }
 
     th {
-        border-right: 1px solid variables.$color-green-1;
-        border-bottom: 1px solid variables.$color-green-1;
+        border-right: 1px solid variables.$color-brand-orange;
+        border-bottom: 1px solid variables.$color-brand-orange;
         background-color: variables.$color-green-pale;
 
         &:last-child {
@@ -2373,7 +2364,7 @@ div[class*="block-"]{
     a:hover,
     a:focus{
         .circle{
-            fill: variables.$color-green-1;
+            fill: variables.$color-brand-orange;
         }
         .arrow{
             fill: variables.$color-white;
@@ -2558,7 +2549,7 @@ FOOTER STYLES
         height: var(--size);
         border-radius: calc(var(--size) * .5);
         border-radius: 50%;
-        // background-color: variables.$color-green-1;
+        // background-color: variables.$color-brand-orange;
         // color: variables.$color-white;
         text-align: center;
         line-height: var(--size);

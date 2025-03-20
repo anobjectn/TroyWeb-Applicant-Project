@@ -73,55 +73,6 @@
       "oAP" : "\/archive.php",
       "oF" : 0
     },
-    "\/blocks\/card-grid\/block.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/blocks\/card-grid\/block-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/blocks\/card-grid\/card-grid.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/card-grid\/card-grid-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/card-grid\/card-grid.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/card-grid\/card-grid.css.map",
-      "oF" : 0
-    },
-    "\/blocks\/card-grid\/card-grid.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/card-grid\/card-grid.php",
-      "oF" : 0
-    },
-    "\/blocks\/card-grid\/card-grid.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 1,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/card-grid.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 0
-    },
     "\/blocks\/content-teaser\/block.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -181,26 +132,6 @@
       "oS" : 3,
       "pg" : 0
     },
-    "\/blocks\/css\/card-grid.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/card-grid-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/css\/card-grid.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/card-grid.css.map",
-      "oF" : 0
-    },
     "\/blocks\/css\/content-teaser.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -219,66 +150,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/blocks\/css\/content-teaser.css.map",
-      "oF" : 0
-    },
-    "\/blocks\/css\/featured-cider.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/featured-cider-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/css\/featured-cider.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/featured-cider.css.map",
-      "oF" : 0
-    },
-    "\/blocks\/css\/filters.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/filters-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/css\/filters.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/filters.css.map",
-      "oF" : 0
-    },
-    "\/blocks\/css\/header-on-greenified.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/header-on-greenified-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/css\/header-on-greenified.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/header-on-greenified.css.map",
       "oF" : 0
     },
     "\/blocks\/css\/hero_style.css" : {
@@ -319,26 +190,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/blocks\/css\/hero.css.map",
-      "oF" : 0
-    },
-    "\/blocks\/css\/image-strip.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/image-strip-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/css\/image-strip.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/image-strip.css.map",
       "oF" : 0
     },
     "\/blocks\/css\/img-w-block.css" : {
@@ -421,196 +272,6 @@
       "oAP" : "\/blocks\/css\/simple-feature-columns.css.map",
       "oF" : 0
     },
-    "\/blocks\/css\/testimonial-slider.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/testimonial-slider-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/css\/testimonial-slider.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/testimonial-slider.css.map",
-      "oF" : 0
-    },
-    "\/blocks\/featured-cider\/block.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/blocks\/featured-cider\/block-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/blocks\/featured-cider\/featured-cider.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/featured-cider\/featured-cider-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/featured-cider\/featured-cider.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/featured-cider\/featured-cider.css.map",
-      "oF" : 0
-    },
-    "\/blocks\/featured-cider\/featured-cider.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/featured-cider\/featured-cider.php",
-      "oF" : 0
-    },
-    "\/blocks\/featured-cider\/featured-cider.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 1,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/featured-cider.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 0
-    },
-    "\/blocks\/featured-cider\/shape-sm.png" : {
-      "ft" : 32768,
-      "iS" : 5837,
-      "oA" : 0,
-      "oAP" : "\/blocks\/featured-cider\/shape-sm.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 90,
-      "rq" : 75
-    },
-    "\/blocks\/featured-cider\/shape-sm.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/blocks\/featured-cider\/shape-sm.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
-    },
-    "\/blocks\/filters\/block.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/blocks\/filters\/block-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/blocks\/filters\/filters.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/filters\/filters-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/filters\/filters.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/filters\/filters.css.map",
-      "oF" : 0
-    },
-    "\/blocks\/filters\/filters.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/filters\/filters.php",
-      "oF" : 0
-    },
-    "\/blocks\/filters\/filters.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 1,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/filters.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 0
-    },
-    "\/blocks\/header-on-greenified\/block.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/blocks\/header-on-greenified\/block-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/blocks\/header-on-greenified\/header-on-greenified.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/header-on-greenified\/header-on-greenified-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/header-on-greenified\/header-on-greenified.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/header-on-greenified\/header-on-greenified.css.map",
-      "oF" : 0
-    },
-    "\/blocks\/header-on-greenified\/header-on-greenified.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/header-on-greenified\/header-on-greenified.php",
-      "oF" : 0
-    },
-    "\/blocks\/header-on-greenified\/header-on-greenified.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 1,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/header-on-greenified.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 0
-    },
     "\/blocks\/hero\/block.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -689,55 +350,6 @@
       "ma" : 1,
       "oA" : 0,
       "oAP" : "\/blocks\/css\/hero.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 0
-    },
-    "\/blocks\/img-strip\/block.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/blocks\/img-strip\/block-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/blocks\/img-strip\/image-strip.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/img-strip\/image-strip-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/img-strip\/image-strip.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/img-strip\/image-strip.css.map",
-      "oF" : 0
-    },
-    "\/blocks\/img-strip\/image-strip.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/img-strip\/image-strip.php",
-      "oF" : 0
-    },
-    "\/blocks\/img-strip\/image-strip.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 1,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/image-strip.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0
@@ -934,55 +546,6 @@
       "ma" : 1,
       "oA" : 0,
       "oAP" : "\/blocks\/css\/simple-feature-columns.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 0
-    },
-    "\/blocks\/testimonial-slider\/block.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/blocks\/testimonial-slider\/block-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/blocks\/testimonial-slider\/testimonial-slider.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/testimonial-slider\/testimonial-slider-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/testimonial-slider\/testimonial-slider.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/testimonial-slider\/testimonial-slider.css.map",
-      "oF" : 0
-    },
-    "\/blocks\/testimonial-slider\/testimonial-slider.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/testimonial-slider\/testimonial-slider.php",
-      "oF" : 0
-    },
-    "\/blocks\/testimonial-slider\/testimonial-slider.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 1,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/testimonial-slider.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0
@@ -2145,36 +1708,12 @@
       "oAP" : "\/sidebar.php",
       "oF" : 0
     },
-    "\/single-accommodation.php" : {
+    "\/single-applicant.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/single-accommodation.php",
-      "oF" : 0
-    },
-    "\/single-cider.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/single-cider.php",
-      "oF" : 0
-    },
-    "\/single-experience.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/single-experience.php",
-      "oF" : 0
-    },
-    "\/single-full.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/single-full.php",
+      "oAP" : "\/single-applicant.php",
       "oF" : 0
     },
     "\/single.php" : {
@@ -2339,6 +1878,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/post-navigation.php",
+      "oF" : 0
+    },
+    "\/templates\/single-applicant-loop.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/single-applicant-loop.php",
       "oF" : 0
     },
     "\/templates\/single-event-loop.php" : {

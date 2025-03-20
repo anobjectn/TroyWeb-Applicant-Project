@@ -45,7 +45,7 @@ textarea,
     border: 1px solid variables.$color-white;
     border-bottom: 1px solid variables.$color-black;
 
-    // accent-color: variables.$color-green-1;
+    // accent-color: variables.$color-brand-orange;
 
     // a focused input (or hovered on)
     &:focus,
@@ -113,11 +113,11 @@ legend {
 .radio-buttons,
 input[type="radio"],
 input[type="checkbox"] {
-    accent-color: variables.$color-green-1;
-    --gf-ctrl-accent-color: #{variables.$color-green-1};
-    --gf-ctrl-choice-check-color: #{variables.$color-green-1};
-    --gf-ctrl-btn-bg-color-focus-primary: #{variables.$color-green-1};
-    --gf-ctrl-file-btn-border-inline-end-color: #{variables.$color-green-1};
+    accent-color: variables.$color-brand-orange;
+    --gf-ctrl-accent-color: #{variables.$color-brand-orange};
+    --gf-ctrl-choice-check-color: #{variables.$color-brand-orange};
+    --gf-ctrl-btn-bg-color-focus-primary: #{variables.$color-brand-orange};
+    --gf-ctrl-file-btn-border-inline-end-color: #{variables.$color-brand-orange};
     &:focus{
         // --gf-local-shadow: var(--gf-ctrl-shadow-focus)
     }
@@ -221,7 +221,7 @@ select.minimal{
     }
     &:not(.newsletter-signup-container div,.search-container div){
         input[type='submit']{
-            @extend .green-button;
+            @extend .brand-button;
             padding-inline: 2em !important;
             @media (min-width: responsive.$non-mobile-min){
                 padding-inline: 4em !important;
@@ -280,7 +280,7 @@ select.minimal{
             box-shadow: none;
             // @extend .font-ogg;
             font-size: 16px;
-            @include typography.responsive-font(16px, 24px, 768px, 1440px);
+            // @include typography.responsive-font(16px, 24px, 768px, 1440px);
             // color: $color-onyx;
         }
     }

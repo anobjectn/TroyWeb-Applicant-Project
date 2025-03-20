@@ -329,7 +329,7 @@ p {
 
 
 .color-green-1.color-green-1{
-  color: variables.$color-green-1;
+  color: variables.$color-brand-orange;
 }
 .color-green-2.color-green-2{
   color: variables.$color-green-2;
@@ -389,6 +389,8 @@ RESPONSIVE FONTS
 }
 
 @mixin responsive-font($min-font-size, $max-font-size, $min-vw: 320px, $max-vw: 1920px) {
+  // DEPRECATED
+
   // useage 
   // @include typography.responsive-font(16px, 18px, 1023px, 1440px);
   // @include typography.responsive-font(24px, 36px, 768px, 1600px);
@@ -397,8 +399,8 @@ RESPONSIVE FONTS
   $u3: math.unit($min-font-size);
   $u4: math.unit($max-font-size);
 
+  font-size: $min-font-size;
   @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-    font-size: $min-font-size;
 
     @media screen and (min-width: $min-vw) {
       font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
@@ -410,36 +412,8 @@ RESPONSIVE FONTS
   }
 }
 
-.ghostly-pale-text{
-  color: variables.$color-green-pale;
-  text-transform: uppercase;
-  line-height: 0.6;
-  padding: 0;
-  margin: 0;
-  letter-spacing: 0.2em;
-  @extend .font-futurapt-bold;
-  white-space: nowrap;
-  font-size: 48px;
-  @include responsive-font(40px, 48px, 1023px, 1440px);
 
-}
 
-.roof-text{
-  // @extend .font-grotesk-medium;
-  text-transform: uppercase;
-  font-size: 15px;
-  letter-spacing: 0.2em;
-  // color: $color-golden-brown;
-  text-wrap: pretty;
-  line-height: 1.8;
-  line-height: 1.3;
-  a{
-    color: inherit;
-  }
-}
-img + .roof-text{
-  margin-top: 2em;
-}
 
 .small-text{
   font-size: 12px;
@@ -449,25 +423,18 @@ img + .roof-text{
     @extend .font-oregano-regular;
     margin-bottom: 0.75em;
     line-height: 1.4;
-    // @extend .font-ogg;
-    @include responsive-font(28px, 42px, 768px, 1440px);
-    &.size-2{
-      @include responsive-font(24px, 34px, 768px, 1440px);
-    }
-    &.size-3{
-      @include responsive-font(28px, 40px, 768px, 1440px);
-    }
-    &.size-4{
-      @include responsive-font(28px, 39px, 768px, 1440px);
-    }
-    &.size-5{
-      @include responsive-font(28px, 38px, 768px, 1440px);
-    }
-    // &:not(.content-section-picture-card-duo .large-text){
-    //   color: $color-onyx;
-    //   p{
-    //     color: $color-onyx;
-    //   }
+    // @include responsive-font(28px, 42px, 768px, 1440px);
+    // &.size-2{
+    //   @include responsive-font(24px, 34px, 768px, 1440px);
+    // }
+    // &.size-3{
+    //   @include responsive-font(28px, 40px, 768px, 1440px);
+    // }
+    // &.size-4{
+    //   @include responsive-font(28px, 39px, 768px, 1440px);
+    // }
+    // &.size-5{
+    //   @include responsive-font(28px, 38px, 768px, 1440px);
     // }
     &:not(.unbalanced){
       text-wrap: balance;
@@ -479,19 +446,14 @@ img + .roof-text{
       margin-block: 0;
       line-height: 1.4;
     }
-    p em,
-    p i,
-    em,
-    i{
-        font-style: normal;
-        // color: $color-golden-brown;
-    }
+    
 }
 
 .big-text{
     // @extend .font-ogg;
     // color: $color-onyx;
     line-height: 1.48;
+    font-size: 2.5rem;
     text-wrap: balance;
     em,
     i{
@@ -502,7 +464,6 @@ img + .roof-text{
       @include responsive-font(20px, 34px, 768px, 1440px);
     }
 
-    @include responsive-font(24px, 40px, 768px, 1440px);
 }
 
 .line-clamp-base {
