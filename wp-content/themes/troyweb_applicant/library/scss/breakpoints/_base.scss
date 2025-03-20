@@ -1485,6 +1485,15 @@ body.single-applicant{
             letter-spacing: -0.04em;
         }
     }
+    @media (min-width: responsive.$non-mobile-min){
+        .meta-facet.core-values{
+            display: flex;
+            justify-content: space-between;
+            .core-value{
+                max-width: 15ch;
+            }
+        }
+    }
 }
 
 .date {}
