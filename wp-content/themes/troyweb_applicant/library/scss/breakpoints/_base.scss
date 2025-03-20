@@ -840,6 +840,7 @@ h2, .h2 {
 h3, .h3 {
     font-size: 2rem; // target ( ~32px )
     letter-spacing: .0469em;
+    font-style: italic;
 }
 
 h4, .h4 {
@@ -1425,7 +1426,66 @@ body.home {}
 PATTERNS / PATTERN RELATED
 ********************/
 
+body.single-applicant{
+    .twa-post-banner-image-container{
+        padding-top: 
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .article-header{
+        position: relative;
+    }
+    .twa-post-banner-image-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            inset: 50% 0 0 0;
+            background: linear-gradient(to right, variables.$color-neutral, #fff);
+            // background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+    .applicant-meta-container{
+        position: relative;
+        .meta-facet{
+            display: flex;
+            justify-content: center;
+            gap: 0.5ch;
+            .label{
+                @extend .font-navigation-heading-label;
+                &::after{
+                    content: ':';
+                }
+            }
+            .value{
 
+            }
+        }
+    }
+    .twa-post-feature-image-container{
+        display: flex;
+        justify-content: center;
+        padding-top: 4.8vw;
+        img{
+            height: 41vw;
+            width: auto;
+        }
+    }
+    @media (max-width: responsive.$mobile-max){
+        h1.single-title{
+            font-size: 1.25rem;
+            margin-block: 1em;
+            text-align: center;
+            letter-spacing: -0.04em;
+        }
+    }
+}
 
 .date {}
 
@@ -1729,22 +1789,7 @@ ul.page-numbers,
 }
 
 
-.twa-post-banner-image-container{
-    img{
-        object-fit: cover;
-        object-position: center;
-        width: 100%;
-        // max-width: unset;
-        height: auto;
-    }
-    @media (min-width: responsive.$non-mobile-min){
-        overflow: hidden;
-        max-height: 400px;
-        img{
-            transform: translateY(-20%);
-        }
-    }
-}
+
 
 aside{
     text-align: center;

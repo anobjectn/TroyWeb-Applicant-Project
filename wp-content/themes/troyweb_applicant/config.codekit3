@@ -132,146 +132,6 @@
       "oS" : 3,
       "pg" : 0
     },
-    "\/blocks\/css\/content-teaser.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/content-teaser-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/css\/content-teaser.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/content-teaser.css.map",
-      "oF" : 0
-    },
-    "\/blocks\/css\/hero_style.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/hero_style-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/css\/hero_style.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/hero_style.css.map",
-      "oF" : 0
-    },
-    "\/blocks\/css\/hero.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/hero-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/css\/hero.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/hero.css.map",
-      "oF" : 0
-    },
-    "\/blocks\/css\/img-w-block.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/img-w-block-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/css\/img-w-block.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/img-w-block.css.map",
-      "oF" : 0
-    },
-    "\/blocks\/css\/img-w-blocks.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/img-w-blocks-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/css\/img-w-blocks.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/img-w-blocks.css.map",
-      "oF" : 0
-    },
-    "\/blocks\/css\/page-header.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/page-header-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/css\/page-header.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/page-header.css.map",
-      "oF" : 0
-    },
-    "\/blocks\/css\/simple-feature-columns.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/simple-feature-columns-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/css\/simple-feature-columns.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/simple-feature-columns.css.map",
-      "oF" : 0
-    },
     "\/blocks\/hero\/block.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -972,6 +832,19 @@
       "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 90,
+      "rq" : 75
+    },
+    "\/library\/images\/hero-background_r.jpg" : {
+      "ft" : 16384,
+      "iS" : 20230,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/library\/images\/hero-background_r.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
       "rq" : 75
     },
     "\/library\/images\/hero-background.jpg" : {
