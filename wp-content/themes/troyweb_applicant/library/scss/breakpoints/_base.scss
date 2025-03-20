@@ -919,7 +919,7 @@ HEADER STYLES
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-block: 1em;
+            margin-block: 1.8em;
         }
     }
 }
@@ -936,9 +936,9 @@ HEADER STYLES
 
 #logo-container{
     @media (max-width: responsive.$mobile-max){
-        padding-block: 1.3em;
+        padding-block: 0.9em;
         img{
-            height: 45px;
+            height: 30px;
             width: auto;
         }
     }
@@ -1017,7 +1017,7 @@ HEADER STYLES
     #header.main-menu-open &,
     body.mobile-header-scrolled-above &{
         position: fixed;
-        top: 26px;
+        top: 11px;
         right: 15px;
         background-color: rgba(39, 39, 39, 0.2);
         background-blend-mode: multiply;
@@ -1081,7 +1081,7 @@ HEADER STYLES
 
 .search-container{
     // padding-left: calc(2 * var(--side-column-width));
-    padding-top: 1em;
+    padding-top: 0.5em;
 }
 
 .a-menu-link{
@@ -1320,7 +1320,7 @@ ul.nav{
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
-        gap: 1em;
+        gap: 1.3em;
         // justify-content: center;
         > li{
             border-top: none !important;
