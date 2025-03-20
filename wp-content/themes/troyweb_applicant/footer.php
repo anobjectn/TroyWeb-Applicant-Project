@@ -35,8 +35,8 @@
 		</div>
 		<a href="#npc" class="back-to-top" aria-label="Back to top"><i class="fa-regular fa-arrow-up-to-line"></i></a>
 	</div>
-	<div class="main-footer-bottom threequarter-v-padding">
-		<p class="source-org copyright">&copy; <?php echo date('Y'); ?> Troy Web Consulting. All rights reserved.</p>
+	<div class="main-footer-bottom">
+		<p class="source-org copyright small-text">&copy; <?php echo date('Y'); ?> Troy Web Consulting.<br>All rights reserved.</p>
 	</div>
 </footer>
 

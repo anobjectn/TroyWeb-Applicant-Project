@@ -78,7 +78,7 @@ footer.twa-grid,
             var(--side-column-width) 
             [full-width-end];
         > *{
-            grid-column: outer-box;
+            grid-column: inner-box;
             // padding-block: var(--block-vertical-inner-space);
             &.full-width-hr,
             &.full-width,

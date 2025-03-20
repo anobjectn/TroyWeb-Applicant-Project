@@ -441,6 +441,10 @@ img + .roof-text{
   margin-top: 2em;
 }
 
+.small-text{
+  font-size: 12px;
+}
+
 .large-text{
     @extend .font-oregano-regular;
     margin-bottom: 0.75em;
