@@ -82,25 +82,27 @@
                 $core_values = get_acf_field('core_values');
                 if(is_non_empty_array($core_values)):?>
                     <div class="meta-facet core-values">
-                        <div class="core-label label">Core Values</div><?php 
-                        // cfdump($core_values);
-                        foreach ($core_values as $core_value):?>
-                            <div class="core-value value"><?php
-                                $cv_featured_id = $core_value->ID;
-                                $cv_title = $core_value->post_title;
-                                $cv_post_content = $core_value->post_content;
-                                $cv_thumbnail = get_the_post_thumbnail($cv_featured_id, 'thumbnail');
-                                if($cv_thumbnail):
-                                    echo '<div class="core-value-thumbnail">'.$cv_thumbnail.'</div>';
-                                endif;
-                                if($cv_title):
-                                    echo '<h3 class="core-value-title">'.$cv_title.'</h3>';
-                                endif;
-                                if($cv_post_content):
-                                    echo '<div class="core-value-content">'.$cv_post_content.'</div>';
-                                endif;?>
-                            </div><?php 
-                        endforeach;?>
+                        <div class="core-label label">Core Values</div>
+                        <div class="core-values-list"><?php 
+                            // cfdump($core_values);
+                            foreach ($core_values as $core_value):?>
+                                <div class="core-value value"><?php
+                                    $cv_featured_id = $core_value->ID;
+                                    $cv_title = $core_value->post_title;
+                                    $cv_post_content = $core_value->post_content;
+                                    $cv_thumbnail = get_the_post_thumbnail($cv_featured_id, 'thumbnail');
+                                    if($cv_thumbnail):
+                                        echo '<div class="core-value-thumbnail">'.$cv_thumbnail.'</div>';
+                                    endif;
+                                    if($cv_title):
+                                        echo '<h3 class="core-value-title">'.$cv_title.'</h3>';
+                                    endif;
+                                    if($cv_post_content):
+                                        echo '<div class="core-value-content">'.$cv_post_content.'</div>';
+                                    endif;?>
+                                </div><?php 
+                            endforeach;?>
+                        </div>
                     </div><?php 
                 endif;
                 

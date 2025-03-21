@@ -1559,14 +1559,30 @@ body.single-applicant{
             }
         }
         .meta-facet.core-values{
+            display: flex;
             flex-direction: column;
+            align-items: center;
+            .core-values-list{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+        .core-value-thumbnail{
+            display: flex;
+            justify-content: center;
         }
     }
     @media (min-width: responsive.$non-mobile-min){
         .meta-facet.core-values{
-            display: flex;
-            justify-content: space-between;
-            height: 100%;
+            flex-direction: column;
+            .core-values-list{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
             .core-value{
                 max-width: 15ch;
             }
