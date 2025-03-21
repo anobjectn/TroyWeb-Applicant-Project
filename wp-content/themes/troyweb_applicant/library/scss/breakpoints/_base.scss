@@ -1509,6 +1509,7 @@ body.single-applicant{
                     transparent var(--stop-2)
                 );
             }
+
             .core-value-thumbnail{
                 img{
                     margin-inline: auto;
@@ -1522,6 +1523,17 @@ body.single-applicant{
                 @extend .font-oldenburg;
                 p{
                     line-height: 1.2;
+                }
+            }
+
+            @media (prefers-reduced-motion: no-preference) {
+                @supports (animation-timeline: scroll()) {
+                    .core-value{
+                        opacity: 0;
+                        animation: trigger steps(1) both, fade linear both;
+                        animation-timeline: view();
+                        animation-range: entry 0% contain 25%;
+                    }
                 }
             }
         }
@@ -1792,6 +1804,21 @@ body.single-applicant{
             --angle: 178deg;
         }
     }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes trigger {
+  to {
+    --animate: true;
+  }
 }
 
 .date {}
