@@ -1627,6 +1627,9 @@ body.single-applicant{
                 flex-direction: column;
                 margin-top: 3em;
 
+                h3.core-value-title{
+                   font-size: 1.9rem; 
+                }
                 .core-label{
                     width: 25%;
                     font-size: 2.15rem;
@@ -1732,7 +1735,7 @@ body.single-applicant{
             margin-left: 2.7em;
         }
     }
-    @media (min-width: 1920px){
+    @media (min-width: 1700px){
         .meta-facet.core-values .core-values-list{
             --angle: 177.5deg;
             // --stop-1: 17%;
