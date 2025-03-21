@@ -1481,15 +1481,25 @@ body.single-applicant{
             grid-auto-flow: row;
             text-align: center;
             row-gap: 1.25rem;
+
+            h3.core-value-title{
+                font-size: 1.75rem;
+            }
             
             .core-values-list{
-                --stop-1: 11%;
-                --stop-2: 86%;
+                --stop-1: 12.5%;
+                --stop-2: 89%;
                 --angle: 167deg;
+
+                display: flex;
+                flex-direction: column;
+                gap: 1.9em;
+
                 color: variables.$color-white;
                 padding-bottom: 8em;
                 justify-content: center;
                 text-align: center;
+
                 background-image: linear-gradient(
                     var(--angle), 
                     transparent,
@@ -1499,10 +1509,17 @@ body.single-applicant{
                     transparent var(--stop-2)
                 );
             }
+            .core-value-thumbnail{
+                img{
+                    margin-inline: auto;
+                }
+            }
             .core-value-content{
-                font-size: 1.5rem;
-                max-width: 23ch;
+                font-size: 1rem;
+                margin-top: 1.4em;
+                max-width: 22.4ch;
                 margin-inline: auto;
+                @extend .font-oldenburg;
                 p{
                     line-height: 1.2;
                 }
@@ -1591,6 +1608,9 @@ body.single-applicant{
                 }
             }
         }
+        .core-values-list{
+            // grid-column: full-width;
+        }
         .core-value-thumbnail{
             display: flex;
             justify-content: center;
@@ -1605,9 +1625,10 @@ body.single-applicant{
             &.core-values{
                 flex-direction: column;
                 .core-values-list{
+
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-between;
+                    justify-content: space-evenly;
                 }
             }
             &.about-me{
