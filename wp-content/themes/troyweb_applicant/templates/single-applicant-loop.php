@@ -72,7 +72,7 @@
                                     
             </header> <?php // end article header ?>
     
-            <section class="entry-content" itemprop="articleBody">
+            <section class="entry-content-inner full-width twa-grid" itemprop="articleBody">
 
                 <div class="meta-facet about-me post-content">
                     <div class="label">About Me</div>
@@ -81,9 +81,9 @@
 
                 $core_values = get_acf_field('core_values');
                 if(is_non_empty_array($core_values)):?>
-                    <div class="meta-facet core-values">
+                    <div class="meta-facet core-values full-width twa-grid">
                         <div class="core-label label">Core Values</div>
-                        <div class="core-values-list"><?php 
+                        <div class="core-values-list full-width"><?php 
                             // cfdump($core_values);
                             foreach ($core_values as $core_value):?>
                                 <div class="core-value value"><?php

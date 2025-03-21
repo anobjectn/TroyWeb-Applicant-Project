@@ -1474,6 +1474,40 @@ body.single-applicant{
                 line-height: 1.4;
             }
         }
+        &.core-values{
+            
+            margin-top: 4em;
+            display: grid;
+            grid-auto-flow: row;
+            text-align: center;
+            row-gap: 1.25rem;
+            
+            .core-values-list{
+                --stop-1: 11%;
+                --stop-2: 86%;
+                --angle: 167deg;
+                color: variables.$color-white;
+                padding-bottom: 8em;
+                justify-content: center;
+                text-align: center;
+                background-image: linear-gradient(
+                    var(--angle), 
+                    transparent,
+                    transparent var(--stop-1), 
+                    variables.$color-brand-orange var(--stop-1), 
+                    variables.$color-brand-orange var(--stop-2),
+                    transparent var(--stop-2)
+                );
+            }
+            .core-value-content{
+                font-size: 1.5rem;
+                max-width: 23ch;
+                margin-inline: auto;
+                p{
+                    line-height: 1.2;
+                }
+            }
+        }
     }
     .applicant-meta-container{
         position: relative;
@@ -1541,7 +1575,6 @@ body.single-applicant{
         }
     }
 
-
     @media (max-width: responsive.$mobile-max){
         h1.single-title{
             font-size: 1.25rem;
@@ -1556,18 +1589,6 @@ body.single-applicant{
                 p{
                     margin-top: 0.5em;
                 }
-            }
-        }
-        .meta-facet.core-values{
-            margin-top: 4em;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .core-values-list{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                text-align: center;
             }
         }
         .core-value-thumbnail{
