@@ -1,12 +1,4 @@
 <footer id="main-footer" class="main-footer twa-grid" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
-	<div class="main-footer-top no-v-padding-bottom"><?php 
-		
-		// cfdump($extra_footer_type);
-		// cfdump($event_list_type);
-		// cfdump($event_list_selected);
-		// cfdump($event_list_search); 
-		// ?>
-	</div>
 	<div class="main-footer-middle">
 		<div class="branding-and-info">
 			<a href="<?php echo home_url(); ?>" class="footer-logo" itemprop="url" title="<?php bloginfo('name'); ?>">
