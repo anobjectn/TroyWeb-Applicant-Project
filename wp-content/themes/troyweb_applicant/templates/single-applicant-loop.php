@@ -58,12 +58,13 @@
                             <div class="meta-facet skills">
                                 <div class="label">Skills</div>
                                 <div class="value"><?php 
-                                    
-                                        $skill_names = array_map(function($skill) {
-                                            return esc_html($skill->name);
-                                        }, $skills);
-    
-                                        echo implode(', ', $skill_names);?>
+                                    $skill_names = array_map(function($skill) {
+                                        return esc_html($skill->name);
+                                    }, $skills);
+
+                                    //sort($skill_names);
+
+                                    echo implode(', ', $skill_names); ?>
                                 </div>
                             </div><?php
                         endif; ?>
@@ -110,16 +111,20 @@
                 
                 // Fetch and list terms from the 'experience' taxonomy
                 $experiences = get_the_terms(get_the_ID(), 'experience');
+                $experince_image_id = get_acf_field('experience_image');
                 if ($experiences && !is_wp_error($experiences)):?>
                     <div class="applicant-experience">
-                        <div class="label">Experience</div>
-                        <div class="value">
+                        <div class="label navigation-heading-label">Experience</div>
+                        <div class="value font-oregano">
                             <ul class="experience-list"><?php 
                                 foreach ($experiences as $experience):
                                     echo '<li>' . esc_html($experience->name) . '</li>';
                                 endforeach;?>
                             </ul>
-                        </div>
+                        </div><?php 
+                        if($experince_image_id):
+                            echo '<div class="experience-image">'.wp_get_attachment_image( $experince_image_id,'large' ).'</div>';
+                        endif;?>
                     </div><?php 
                 endif; ?>
             </section> <?php // end article section ?>

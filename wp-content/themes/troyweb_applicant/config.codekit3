@@ -9,6 +9,14 @@
   ],
   "creatorBuild" : "34689",
   "files" : {
+    "\/_custom-post-types-and-taxonomies.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/_custom-post-types-and-taxonomies.php",
+      "oF" : 0
+    },
     "\/404.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -583,14 +591,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/comments.php",
-      "oF" : 0
-    },
-    "\/custom-post-types-taxonomies.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/custom-post-types-taxonomies.php",
       "oF" : 0
     },
     "\/footer.php" : {

@@ -1592,6 +1592,27 @@ body.single-applicant{
         }
     }
 
+    .applicant-experience{
+        padding-bottom: 3em;
+        .label{
+            text-align: center;
+            font-size: 1.25rem;
+        }
+    }
+    .experience-list.experience-list{
+        width: 16ch;
+        margin-top: 5px;
+        margin-inline: auto;
+        padding-left: 1.6em;
+        font-size: 1.3rem;
+        li + li{
+            margin-top: 0;
+        }
+    }
+    .experience-image{
+        padding-inline: 19%;
+    }
+
     @media (max-width: responsive.$mobile-max){
         h1.single-title{
             font-size: 1.25rem;
@@ -1609,9 +1630,6 @@ body.single-applicant{
             }
         }
 
-        .core-values-list{
-            // grid-column: full-width;
-        }
         .core-value-thumbnail{
             display: flex;
             justify-content: center;
@@ -1728,7 +1746,6 @@ body.single-applicant{
         }
         .twa-post-banner-image-container::before{
             background: linear-gradient(to right, #EFEFEF, #fff 50%);
-
         }
         .twa-post-feature-image-container{
             justify-content: flex-start;
