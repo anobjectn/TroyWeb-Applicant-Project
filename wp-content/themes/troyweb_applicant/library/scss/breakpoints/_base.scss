@@ -1426,7 +1426,7 @@ PATTERNS / PATTERN RELATED
 body.single-applicant{
     .article-header{
         position: relative;
-        margin-bottom: 2em;
+        margin-bottom: 3em;
     }
     .twa-post-banner-image-container{
         position: absolute;
@@ -1462,6 +1462,17 @@ body.single-applicant{
         }
         .value{
             @extend .font-oregano;
+            font-size: 1.1rem;
+        }
+        &.about-me{
+            .value{
+                font-size: 1.2rem;
+                padding-inline: 1.4em;
+                font-weight: bold;
+            }
+            p{
+                line-height: 1.4;
+            }
         }
     }
     .applicant-meta-container{
@@ -1529,6 +1540,8 @@ body.single-applicant{
             --circle-size: calc(var(--img-height) * 0.635);
         }
     }
+
+
     @media (max-width: responsive.$mobile-max){
         h1.single-title{
             font-size: 1.25rem;
@@ -1539,6 +1552,14 @@ body.single-applicant{
         .meta-facet.about-me{
             flex-direction: column;
             justify-content: center;
+            .value{
+                p{
+                    margin-top: 0.5em;
+                }
+            }
+        }
+        .meta-facet.core-values{
+            flex-direction: column;
         }
     }
     @media (min-width: responsive.$non-mobile-min){

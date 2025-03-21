@@ -81,10 +81,11 @@
 
                 $core_values = get_acf_field('core_values');
                 if(is_non_empty_array($core_values)):?>
-                    <div class="meta-facet core-values"><?php 
+                    <div class="meta-facet core-values">
+                        <div class="core-label label">Core Values</div><?php 
                         // cfdump($core_values);
                         foreach ($core_values as $core_value):?>
-                            <div class="core-value"><?php
+                            <div class="core-value value"><?php
                                 $cv_featured_id = $core_value->ID;
                                 $cv_title = $core_value->post_title;
                                 $cv_post_content = $core_value->post_content;
@@ -107,20 +108,20 @@
                 
                 // Fetch and list terms from the 'experience' taxonomy
                 $experiences = get_the_terms(get_the_ID(), 'experience');
-                if ($experiences && !is_wp_error($experiences)):
-                    echo '<ul class="experience-list">';
-                    foreach ($experiences as $experience):
-                        echo '<li>' . esc_html($experience->name) . '</li>';
-                    endforeach;
-                    echo '</ul>';
+                if ($experiences && !is_wp_error($experiences)):?>
+                    <div class="applicant-experience">
+                        <div class="label">Experience</div>
+                        <div class="value">
+                            <ul class="experience-list"><?php 
+                                foreach ($experiences as $experience):
+                                    echo '<li>' . esc_html($experience->name) . '</li>';
+                                endforeach;?>
+                            </ul>
+                        </div>
+                    </div><?php 
                 endif; ?>
             </section> <?php // end article section ?>
     
-            <footer class="article-footer">
-    
-                <?php // get_template_part( 'templates/category-tags'); ?>
-    
-            </footer> <?php // end article footer ?>
         </section>
 		
 
