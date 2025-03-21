@@ -1608,6 +1608,7 @@ body.single-applicant{
                 }
             }
         }
+
         .core-values-list{
             // grid-column: full-width;
         }
@@ -1624,11 +1625,25 @@ body.single-applicant{
         .meta-facet{
             &.core-values{
                 flex-direction: column;
-                .core-values-list{
+                margin-top: 3em;
 
+                .core-label{
+                    width: 25%;
+                    font-size: 2.15rem;
+                    text-align: center;
+                }
+                .core-values-list{
+                    --angle: 176deg;
+                    --stop-1: 17%;
+                    --stop-2: 73.5%;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-evenly;
+                    padding-bottom: 10em;
+                }
+                .core-value-content{
+                    font-size: 1.3rem;
+                    max-width: 18.4ch;
                 }
             }
             &.about-me{
@@ -1716,6 +1731,14 @@ body.single-applicant{
             justify-content: flex-start;
             margin-left: 2.7em;
         }
+    }
+    @media (min-width: 1920px){
+        .meta-facet.core-values .core-values-list{
+            --angle: 177.5deg;
+            // --stop-1: 17%;
+            // --stop-2: 73.5%;
+        }
+
     }
 }
 
