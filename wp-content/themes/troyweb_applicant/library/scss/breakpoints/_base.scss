@@ -1559,6 +1559,7 @@ body.single-applicant{
             }
         }
         .meta-facet.core-values{
+            margin-top: 4em;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1572,19 +1573,39 @@ body.single-applicant{
         .core-value-thumbnail{
             display: flex;
             justify-content: center;
+            img{
+                width: 160px;
+                height: auto;
+            }
         }
     }
     @media (min-width: responsive.$non-mobile-min){
-        .meta-facet.core-values{
-            flex-direction: column;
-            .core-values-list{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
+        .meta-facet{
+            &.core-values{
+                flex-direction: column;
+                .core-values-list{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
             }
-
-            .core-value{
-                max-width: 15ch;
+            &.about-me{
+                margin-top: 7.5em;
+                align-items: flex-start;
+                .label{
+                    width: 25%;
+                    font-size: 2.15rem;
+                    text-align: center;
+                }
+                .value{
+                    width: 75%;
+                    font-size: 2.125rem;
+                    padding-right: 3rem;
+                    padding-left: 0;
+                    p{
+                        margin-top: 0;
+                    }
+                }
             }
         }
         .article-header{
