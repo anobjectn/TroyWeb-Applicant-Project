@@ -823,10 +823,7 @@ h1, .h1 {
     margin-top: 0;
     font-size: 3rem;
     color: variables.$color-brand-orange;
-    &.single-title{
-        letter-spacing: 0.15em;
-        margin-bottom: 0.4em;
-    }
+    
 }
 
 h2, .h2 {
@@ -867,7 +864,7 @@ HEADER STYLES
 }
 
 .main-header {
-    background-color: var(--color-white);
+    background-color: variables.$color-neutral;
     a{
         color: variables.$color-text;
         &.active{
@@ -1427,13 +1424,6 @@ PATTERNS / PATTERN RELATED
 ********************/
 
 body.single-applicant{
-    .twa-post-banner-image-container{
-        padding-top: 
-        img{
-            width: 100%;
-            height: auto;
-        }
-    }
     .article-header{
         position: relative;
         margin-bottom: 2em;
@@ -1443,6 +1433,13 @@ body.single-applicant{
         top: 0;
         left: 0;
         width: 100%;
+        max-height: 600px;
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+        }
         &::before{
             content: '';
             display: block;
@@ -1497,7 +1494,7 @@ body.single-applicant{
     }
     .twa-post-feature-image-container{
         --circle-offset: min(4.8vw , 35px);
-        --img-height: min(41vw , 404px);
+        --img-height: min(41vw , 428px);
         --circle-size: calc(var(--img-height) * 0.625);
         --circle-border-width: 6px;
 
@@ -1528,7 +1525,8 @@ body.single-applicant{
             width: auto;
         }
         @media (min-width: responsive.$non-mobile-min){
-            --circle-border-width: 16px;            
+            --circle-border-width: 16px;     
+            --circle-size: calc(var(--img-height) * 0.635);
         }
     }
     @media (max-width: responsive.$mobile-max){
@@ -1547,9 +1545,49 @@ body.single-applicant{
         .meta-facet.core-values{
             display: flex;
             justify-content: space-between;
+            height: 100%;
             .core-value{
                 max-width: 15ch;
             }
+        }
+        .article-header{
+            max-height: 600px;
+            overflow: hidden;
+        }
+        .applicant-meta-container{
+            display: grid;
+            grid-template-columns: 1.33fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        h1.entry-title{
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            align-self: center;
+            margin-left: auto;
+            padding-left: 1.5ch;
+            line-height: 1.4;
+            // text-align: right;
+        }
+        .twa-post-feature-image-container{
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            margin-top: 131px;
+            padding-left: calc(var(--circle-offset) / 1.5);
+            img{
+                margin-left: 39px;
+            }
+        }
+        .header-meta-facets{
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        .twa-post-banner-image-container::before{
+            background: linear-gradient(to right, #EFEFEF, #fff 50%);
+
+        }
+        .twa-post-feature-image-container{
+            justify-content: flex-start;
+            margin-left: 2.7em;
         }
     }
 }

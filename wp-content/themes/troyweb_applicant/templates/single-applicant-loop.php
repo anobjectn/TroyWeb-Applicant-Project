@@ -23,20 +23,15 @@
 
         
         <section class="entry-content twa-grid" itemprop="articleBody">
-            <header class="article-header entry-header full-width">
-                
-                <div class="twa-post-banner-image-container">
+            <header class="article-header entry-header full-width twa-grid">                
+                <div class="twa-post-banner-image-container full-width">
                     <div class="twa-post-banner-image-container-inner">
                         <img src="<?php echo get_theme_file_uri(); ?>/library/images/hero-background_r.jpg" width="1440" height="797" itemprop="logo" alt="Troy Web Consulting" />
                     </div>
                 </div>
-
-                <div class="article-header-inner">
-
-                </div>
                 
                 <div class="applicant-meta-container">
-                    <h1 class="entry-title single-title mq-mobileonly" itemprop="headline" rel="bookmark">
+                    <h1 class="entry-title single-title" itemprop="headline" rel="bookmark">
                         Troy Web Developers: <?php 
                         the_title(); ?>
                     </h1><?php 
@@ -45,34 +40,34 @@
                         <div class="twa-post-feature-image-container"><?php 
                             the_post_thumbnail('large'); ?>
                         </div><?php 
-                    endif;
-                
-                    $species = get_acf_field('species');
-                    if ($species): ?>
-                        <div class="meta-facet species">
-                            <div class="label">Species</div>
-                            <div class="value"><?php 
-                                echo $species; ?>
-                            </div>
-                        </div><?php
-                    endif;
-
-                    // Fetch and list terms from the 'skill' taxonomy
-                    $skills = get_the_terms(get_the_ID(), 'skill');
-                    if ($skills && !is_wp_error($skills)):?>
-                        <div class="meta-facet skills">
-                            <div class="label">Skills</div>
-                            <div class="value"><?php 
-                                
-                                    $skill_names = array_map(function($skill) {
-                                        return esc_html($skill->name);
-                                    }, $skills);
-
-                                    echo implode(', ', $skill_names);?>
-                            </div>
-                        </div><?php
                     endif; ?>
-
+                    <div class="header-meta-facets"><?php 
+                        $species = get_acf_field('species');
+                        if ($species): ?>
+                            <div class="meta-facet species">
+                                <div class="label">Species</div>
+                                <div class="value"><?php 
+                                    echo $species; ?>
+                                </div>
+                            </div><?php
+                        endif;
+    
+                        // Fetch and list terms from the 'skill' taxonomy
+                        $skills = get_the_terms(get_the_ID(), 'skill');
+                        if ($skills && !is_wp_error($skills)):?>
+                            <div class="meta-facet skills">
+                                <div class="label">Skills</div>
+                                <div class="value"><?php 
+                                    
+                                        $skill_names = array_map(function($skill) {
+                                            return esc_html($skill->name);
+                                        }, $skills);
+    
+                                        echo implode(', ', $skill_names);?>
+                                </div>
+                            </div><?php
+                        endif; ?>
+                    </div>
                 </div>
                                     
             </header> <?php // end article header ?>

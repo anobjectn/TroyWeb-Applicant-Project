@@ -8,8 +8,8 @@ LAYOUT & GRID STYLES
 :root{
     --mobile-grid-outer-column-width: 15px;
     --desktop-grid-padding-inline: 58px;
-    --desktop-grid-content-max-width: 1100px;
-    --desktop-grid-wide-max-width: 1324px;
+    --desktop-grid-content-max-width: 1170px;
+    --desktop-grid-wide-max-width: 1270px;
     --desktop-grid-tight-width: 950px; //TODO CHECK IF THIS IS USED
     --desktop-grid-extra-tight-width: 652px;
     --desktop-grid-wide-size: calc((var(--desktop-grid-wide-max-width) - var(--desktop-grid-content-max-width)) / 2);
