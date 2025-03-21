@@ -1580,6 +1580,33 @@ body.single-applicant{
         .header-meta-facets{
             grid-column: 2 / 3;
             grid-row: 2 / 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            .meta-facet{
+                justify-content: space-between;
+                gap: 2.5rem;
+                align-items: flex-start;
+                margin-block: 0;
+                &::before{
+                    width: 92%;
+                }
+                &.species{
+                    padding-block: 0.75em;
+                    .value{
+                        padding-bottom: 1em;
+                    }
+                }
+                .label{
+                    font-size: 2.1rem;
+                    width: calc(30% - 1.25rem);
+                    text-align: right;
+                }
+                .value{
+                    font-size: 2rem;
+                    width: calc(70% - 1.25rem);
+                }                
+            }
         }
         .twa-post-banner-image-container::before{
             background: linear-gradient(to right, #EFEFEF, #fff 50%);
